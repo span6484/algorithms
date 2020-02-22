@@ -15,21 +15,21 @@
 */
 void two_ptr(int **pp)  // 二级指针
 { 
-    printf("fun1\n");
+    printf("two_ptr\n");
 }
 
 void ptr_arr(int *p_a[5])  //指针数组
 {
-    printf("fun4\n");
+    printf("ptr_arr\n");
 }
 
 void arr_ptr(int(*a_p)[5])  //数组指针
 {
-    printf("fun2\n");
+    printf("arr_ptr\n");
 }
 void two_arr(int t_d_a[][5])  //二维数组
 {
-    printf("fun3\n");
+    printf("two_arr\n");
 }
 
 int main()
