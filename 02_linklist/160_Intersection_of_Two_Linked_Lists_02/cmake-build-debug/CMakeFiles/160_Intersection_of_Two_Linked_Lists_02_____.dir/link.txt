@@ -1,0 +1,1 @@
+/Library/Developer/CommandLineTools/usr/bin/cc -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names  CMakeFiles/160_Intersection_of_Two_Linked_Lists_02_____.dir/main.c.o  -o 160_Intersection_of_Two_Linked_Lists_02_____ 

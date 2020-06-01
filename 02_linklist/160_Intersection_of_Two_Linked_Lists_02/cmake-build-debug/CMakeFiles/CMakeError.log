@@ -1,0 +1,10 @@
+Detecting C [-std=c11] compiler features failed to compile with the following output:
+Change Dir: /Users/frank/Documents/Burger/09_linklist/160_Intersection_of_Two_Linked_Lists_02    	/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_9a14a/fast"
+/Library/Developer/CommandLineTools/usr/bin/make -f CMakeFiles/cmTC_9a14a.dir/build.make CMakeFiles/cmTC_9a14a.dir/build
+make[1]: *** No rule to make target `/Users/frank/Documents/Burger/09_linklist/160_Intersection_of_Two_Linked_Lists_02    ', needed by `CMakeFiles/cmTC_9a14a.dir/feature_tests.c.o'.  Stop.
+make: *** [cmTC_9a14a/fast] Error 2
+
+
+

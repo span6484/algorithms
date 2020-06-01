@@ -81,8 +81,5 @@ int main()
     two_arr(t_a);
     two_arr(a_p);
     printf("\n");
-
-
-
     return 0;
 }
