@@ -200,3 +200,6 @@ struct ListNode* cur = (struct ListNode*)malloc(sizeof(struct ListNode));
 
 最为重要的一点，指针要指向有位置的结点，不能指向空！！！！！
 
+## 2. Add Two Numbers
+
+注意链表是一个结点一个结点生成链接，不像数组那样生成一坨，一定要挨着挨着初始化next指针为NULL
