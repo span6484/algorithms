@@ -203,3 +203,9 @@ struct ListNode* cur = (struct ListNode*)malloc(sizeof(struct ListNode));
 ## 2. Add Two Numbers
 
 注意链表是一个结点一个结点生成链接，不像数组那样生成一坨，一定要挨着挨着初始化next指针为NULL
+
+https://zhuanlan.zhihu.com/p/85504177 复习下
+
+## 430. Flatten a Multilevel Doubly Linked List
+
+我们这里就是一直往下走，如果遇到child，就把整个插入进来，然后因为这个是有很多层的，我们很容易想到递归，遇到子节点就往下溯插入即可。
