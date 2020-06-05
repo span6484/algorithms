@@ -209,3 +209,28 @@ https://zhuanlan.zhihu.com/p/85504177 复习下
 ## 430. Flatten a Multilevel Doubly Linked List
 
 我们这里就是一直往下走，如果遇到child，就把整个插入进来，然后因为这个是有很多层的，我们很容易想到递归，遇到子节点就往下溯插入即可。
+
+## 138. Copy List with Random Pointer 01
+
+我们这里有个核心函数是返回random那个指针结点连接的index，然后再第二个深度复制的链表上将对应index的元素连接上。
+
+我们第一次先将这些元素深拷贝，然后再考虑random指针的问题，这样会带来很多次重复的查找，效率并不好。所以考虑更好的解法。
+
+## 138. Copy List with Random Pointer 02 
+
+这种对应关系用个hashmap再好不过了(不过这里感觉没提升啥效率？但是理论上这种更方便查找)
+
+复习map and unordered_map
+
+我们在这里可以把建立表和建立结点合在一步，如果我们已经存入表了，就返回对应新list的结点，如果没有的话就生成新结点，将对应关系入表，然后next和random都这样递归下去连接
+
+## 138. Copy List with Random Pointer 03
+
+这里有个巧妙的方法，先将每个节点复制插入，然后random就是原节点random的下一个，连好random后再分离出来。
+
+## 61. Rotate List
+
+这道题其实很简单，就是算出需要最后几个丢到前面去
+
+
+ 
