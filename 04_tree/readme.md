@@ -26,4 +26,12 @@
 
 这里非常巧妙的利用了deque，因为preoder是中左右，postorder是左右中，他的逆序是中右左，所以就很像前序的逆序，不过在装stack的时候先装左再装右，deque插入首非常高效，我们每次将它插入首然后给vector就是逆序了
 
+## 102. Binary Tree Level Order Traversal 01 递归
 
+这里的递归和前序一样，多了一个level来记录层，当前level大于等于res的size的时候，说明来到了新的层，我们添加一个层进来。
+
+实际上前序，中序，后序都一样，因为他们都是从左往右的顺序。
+
+## 102. Binary Tree Level Order Traversal 02 迭代
+
+这里迭代的套路一样，就是用队列来装，但是这里需要每次记录每层的个数。
