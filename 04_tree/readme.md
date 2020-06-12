@@ -35,3 +35,15 @@
 ## 102. Binary Tree Level Order Traversal 02 迭代
 
 这里迭代的套路一样，就是用队列来装，但是这里需要每次记录每层的个数。
+
+## 104. Maximum Depth of Binary Tree 01 递归
+
+递归这里就很巧妙，递归就是一直递到下一层然后不断+1上来，然后回溯上去得到值，这里我们需要比较左右子树的最大值。
+
+## 104. Maximum Depth of Binary Tree 02 BFS
+
+其实我们这里和层次遍历相同 , 这也称为BFS
+
+## 104. Maximum Depth of Binary Tree 03 DFS
+
+这其实就是刚才讲的自顶向下的方法。
