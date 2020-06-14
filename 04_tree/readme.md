@@ -47,3 +47,21 @@
 ## 104. Maximum Depth of Binary Tree 03 DFS
 
 这其实就是刚才讲的自顶向下的方法。
+
+## 101. Symmetric Tree 01 双端队列
+
+这里用了个双端队列，从front取一个和back取一个比较，如果一样的话 ，front先丢right再丢左，back先丢left再丢right。这样一直是对称着丢，而且肯定会遍历完的。
+
+## 101. Symmetric Tree 02 队列
+
+这样的就是先加两个root，每次就按着反向对应的顺序装入，每次pop两次来比较
+
+## 101. Symmetric Tree 03 双队列
+
+其实流程和02一样，只是双队列来装了而已 
+
+## 101. Symmetric Tree 04 递归
+
+每次递归还是和之前一样，左右对应
+
+## 112. Path Sum 01 
