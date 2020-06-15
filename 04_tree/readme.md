@@ -64,4 +64,30 @@
 
 每次递归还是和之前一样，左右对应
 
-## 112. Path Sum 01 
+## 112. Path Sum 01 递归
+
+见代码
+
+## 112. Path Sum 02 迭代
+
+queue一般用于BFS，stack一般用于DFS，我们这里用两个栈，一个存结点，一个存对应的需要的值，然后栈就是去DFS，去求出最后leaf是否满足条件。
+
+# 重建二叉树
+
+前序/后序+中序序列可以唯一确定一棵二叉树
+
+# 105. Construct Binary Tree from Preorder and Inorder Traversal 01 递归
+
+preorder的第一个就是根节点，我们根据没有重复这个遍历构造一个unordered_map可以找到inorder的root位置。
+
+preorder : [[root], [左]，[右]] 
+
+inorder : [[左],[root],[右]]
+
+我们找到了inorder后，就可以分而治之。
+
+
+
+
+
+
