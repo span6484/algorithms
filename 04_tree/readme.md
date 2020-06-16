@@ -86,6 +86,10 @@ inorder : [[左],[root],[右]]
 
 我们找到了inorder后，就可以分而治之。
 
+## 106. Construct Binary Tree from Inorder and Postorder Traversal 01 递归
+
+同105，不过他的root在最后一个元素。
+
 
 
 
