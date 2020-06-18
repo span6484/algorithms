@@ -90,7 +90,9 @@ inorder : [[左],[root],[右]]
 
 同105，不过他的root在最后一个元素。
 
+## 116. Populating Next Right Pointers in Each Node 01 迭代
 
+其实就是一个层次遍历，从右到左每次出列后给next指针赋值，tmp每次暂存上一次的值就可以实现连接了。
 
 
 
