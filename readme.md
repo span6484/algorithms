@@ -1,8 +1,11 @@
-# c/cpp
+# 不积跬步无以至千里
 
-不积跬步无以至千里
 
-## log
+勾践之围会稽也，嚼然叹曰：“各终于此乎?”种曰：“汤系夏台，文王囚麦里，晋重斗奔翟，齐小白奔苦，其卒王霸。由是观之，何速不为福乎?”
+
+吴既赦越，越王勾践反国，乃苦身焦思，置胆于坐，坐卧即仰胆，饮食亦尝胆也。曰：“女志会稽之耻邪?”
+
+身白操作，夫人自织，食不加肉，衣不重采，折节下贤人，厚宾客，赃贫吊死，与百姓同其劳。
 
 ## 2019
 
@@ -290,6 +293,8 @@ cpp 细节：如何组织cpp项目，如何写cmake，如何引入test，析构�
 
 5.29 -5.31 休息
 
+- 6月计划 ：gre Grammar / ldx / listening / leetcode / data structure review
+
 6.1  greW 400 - 500 1400 - 1600 / tofel听力54 set2 / leetcode21 / gre grammar 
 
 6.2 gre grammer / greW 1600 - 1700 / leetcode2 / 麟渡兮  
@@ -324,4 +329,6 @@ cpp 细节：如何组织cpp项目，如何写cmake，如何引入test，析构�
 
 6.18 listening / gre grammar / greW 1000 - 1050 / leetcode 116
 
-6.19 listening / gre grammar / greW 1050 - 1100
+6.19 listening / gre grammar / greW 1050 - 1100 / leetcode 116 279
+
+6.20 gre grammar / greW 
