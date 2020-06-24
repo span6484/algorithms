@@ -22,4 +22,4 @@ public:
         infect(grid, i, j - 1);
         infect(grid, i, j +1);
     }
-};
+}

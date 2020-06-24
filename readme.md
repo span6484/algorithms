@@ -335,4 +335,8 @@ cpp 细节：如何组织cpp项目，如何写cmake，如何引入test，析构�
 
 6.21 listening / grammar /  greW 1050 - 1100 * N / leetcode 236
 
-6.22 leetcode 279 / greW 1100 - 1200 
+6.22 leetcode 279 / greW review
+
+6.23 grammar 
+
+6.24 grammar / greW review / listening review / leetcode 200
