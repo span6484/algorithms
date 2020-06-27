@@ -23,11 +23,20 @@
 
 见06_disjointed_set
 
-## 752. Open the Lock 01
+## 752. Open the Lock 01 BFS
 
 这就是一个BFS的最短路径问题，我们这里设置一个hashmap,先构建出deadends，其实这个映射就是添加一个flag，不可走和经过后的点，那就肯定不是target，我们不必再走回头路，所以每次先判断是否是，如果不是设置为1表示我们走到这了，每次就是8种方式的转锁变换，我们添加入栈作为外围继续前进，每一维就是一个step.
 
 ## 279. Perfect Squares 01 BFS
 
 这道题也是很明显的一道最短路径问题，利用BFS模板即可，和752差不多，每次只是去减去一个平方数操作。
+
+## 279. Perfect Squares 02 DP
+
+## 155. Min Stack 01 vector
+
+我们这里简单利用vector来模拟栈
+
+## 155. Min Stack 02 two stack
+
 
