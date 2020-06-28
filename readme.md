@@ -345,4 +345,6 @@ cpp 细节：如何组织cpp项目，如何写cmake，如何引入test，析构�
 
 6.26 grammar / leetcode 128 / Union find 复习
 
-6.27 grammar / listening / 
+6.27 grammar / listening / leetcode 155 
+
+6.28 grammar / listening / greW / leetcode 20
