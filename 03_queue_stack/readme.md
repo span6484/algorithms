@@ -106,4 +106,15 @@ for example
 
 这里只需要循环一次，时间复杂度为O(N), 空间复杂度为O(N)
 
-## 133. Clone Graph 01 
+## 133. Clone Graph 01 DFS 递归 数组模拟映射
+
+我们利用题目条件1 <= Node.val <= 100，设置一个100维数组作为int - Node*的映射，克隆图就是一个遍历，如果在数组中存在，那么就是经历过的，否则就new一个点，记录入数组中，他的终止条件是为空则返回空，数组中已有则返回数组中的，neibors递归去push_back其点。
+
+因为只用遍历图一次，所以我们时间复杂度为O(N),空间复杂度为O(N)
+
+## 133. Clone Graph 02 DFS 
+
+原理同上，不过用了unordered_map,更加robust
+
+## 133. Clone Graph 03 BFS 
+
