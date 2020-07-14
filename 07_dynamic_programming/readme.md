@@ -45,10 +45,18 @@ QA:c++类成员变量初始化(unsolved)
 
 https://zhuanlan.zhihu.com/p/118692769
 
-## 198. House Robber 01 dp
+## 198. House Robber 02 dp
 
 根据我们上面分析，我们用一个数组存储已经算过的值就可了
 
 因为每一个状态我们只用算一遍，我们的时间复杂度为O(N),空间复杂度为O(N)
+
+![dp_3](./assets/dp_3.png)
+
+![dp_4](./assets/dp_4.png)
+
+## 198. House Robber 03 dp 迭代
+
+将上面这个自顶向下的递归改为自底向上的迭代，这样边界判断和前面数字处理会多一点，但逻辑会更加清晰。
 
 
