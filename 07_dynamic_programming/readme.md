@@ -14,9 +14,39 @@ overlap sub-problem
 
 ![fib](./assets/fib.png)
 
+```cpp
+int fib(int n) {
+    if(n <= 1) {
+        return 1;
+    }
+    return fib(n-1) + fib(n-2);
+}
+```
+
+```cpp
+// 递推
+f[0] = 1;
+f[1] = 1;
+for(int i = 2; i < n; i++) {
+    f[i] = f[i-1] + f[i-2];
+}
+```
+
 如果递归展开的话我们需要重新计算fib(5),复杂度为O(2^N),我们要想办法去利用之前的值
 
 ![fib_dp](./assets/fib_dp.png)
+
+```cpp
+int fib(int n) {
+    if(n <= 1) {
+        return 1;
+    }
+    if(result[n] >= 0) {
+        return result[n];
+    }
+    return fib(n-1) + fib(n-2);
+}
+```
 
 如此overlap sub-problem子问题就变成了O(N)的复杂度
 ![dp_0](./assets/dp_0.png)
@@ -62,5 +92,26 @@ https://zhuanlan.zhihu.com/p/118692769
 ## 198. House Robber 04 dp 迭代 滚动数组
 
 其实我们这里只需要前两次的房屋就可了，所以我们只需要两个变量来存就可
+
+## 小兵向前冲
+
+![dp_5](./assets/dp_5.png)
+
+![dp_6](./assets/dp_6.png)
+
+```cpp
+// 暴力回溯
+int f(int m, int n) {
+    if(m == 0 || n == 0) return 0;
+    if(m == 1 || n == 1) return 1;
+    return f(m-1, n) + f(m, n-1);
+}
+```
+
+## 64. Minimum Path Sum 01 dp
+
+
+
+
 
 
