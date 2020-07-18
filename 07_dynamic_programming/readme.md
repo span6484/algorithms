@@ -119,7 +119,32 @@ Input:
 
 之前棋盘看多了，下意识左下是(0,0)了，这个是个很典型的dp问题，暴力的话，时间复杂度为O(2^N),我们这里状态转移方程为f(m,n) = min(f(m-1,n),f(m,n-1))+ grid(m,n).因为我们这里比较做小，边界条件超过的话就返回INT_MAX。时间复杂度是O(MN)，空面复杂度为O(MN)。
 
+## 01背包问题
 
 
+![beibao_0](./assets/beibao_0.png)
 
+```cpp
+// 暴力法
+int w[n], v[n], W;
+
+// S <= W
+int search(int idx, int S) {
+    if(S > W) return 0;
+    if(idx >= 0) return 0;
+    return max(search(idx + 1, S+ w[idx]) + v[idx], search(idx + 1, S));
+}
+```
+
+```cpp
+int w[n], v[n], W;
+
+int search(int idx, int S) {
+    if(S > W) return 0;
+    if(idx >= 0) return 0;
+    if(f[idx][S] >= 0) return f[idx][S];
+    f[idx][S] = max(search(idx + 1, S+ w[idx]) + v[idx], search(idx + 1, S));
+    return f[idx][S];
+}
+```
 
