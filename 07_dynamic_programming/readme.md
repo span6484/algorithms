@@ -119,6 +119,20 @@ Input:
 
 之前棋盘看多了，下意识左下是(0,0)了，这个是个很典型的dp问题，暴力的话，时间复杂度为O(2^N),我们这里状态转移方程为f(m,n) = min(f(m-1,n),f(m,n-1))+ grid(m,n).因为我们这里比较做小，边界条件超过的话就返回INT_MAX。时间复杂度是O(MN)，空面复杂度为O(MN)。
 
+## 64. Minimum Path Sum 02 暴力
+
+暴力超时，主要是可以得到状态转移方程，我们这里的时间复杂度为O(2^(M+N)),空间复杂度为O(M+N),因为递归的深度为M+N
+
+## 64. Minimum Path Sum 03 二维dp 递推
+
+这里我们建立一个二维的dp数组递推装最小的sum，我们先把最边缘的两边[0][j]和[i][0]给一路加上值，其他的是min(dp[i-1][j], dp[i][j-1]) + grid[i][j].这个是自底向上的递推。空间复杂度为O(M*N),时间复杂度为O(M*N)
+
+## 64. Minimum Path Sum 03 递推，无需额外空间
+
+因为这个只用遍历一次二维数组，所以我们不需要额外空间。
+
+空间复杂度为O(1),时间复杂度为O(M*N)
+
 ## 01背包问题
 
 
@@ -146,5 +160,22 @@ int search(int idx, int S) {
     f[idx][S] = max(search(idx + 1, S+ w[idx]) + v[idx], search(idx + 1, S));
     return f[idx][S];
 }
+```
+
+```cpp
+// 递推
+f[0][0] = 0;
+for(int i = 1; i <= W; ++i){
+    f[0][i] = -maxValue;
+}
+for(int idx = 1; i <= n; ++idx) {
+    f[idx][0] = 0;
+    for(int j = 1; j <= W; ++j) {
+        f[idx][j] = f[idx -1][j];
+        if(j >= w[idx]) 
+            f[idx][j] = max(f[idx-1][j - w[idx]] + v[idx], f[idx][j]);
+    }
+}
+
 ```
 
