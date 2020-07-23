@@ -135,7 +135,6 @@ Input:
 
 ## 01背包问题
 
-
 ![beibao_0](./assets/beibao_0.png)
 
 ```cpp
@@ -179,3 +178,10 @@ for(int idx = 1; i <= n; ++idx) {
 
 ```
 
+## 746. Min Cost Climbing Stairs 01 暴力
+
+肯定不能过，只是第一步找出暴力搜索，然后去优化
+
+## 746. Min Cost Climbing Stairs 02 dp
+
+和其他dp一样，
