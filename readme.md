@@ -377,7 +377,7 @@ cpp 细节：如何组织cpp项目，如何写cmake，如何引入test，析构�
 
 7.21 eng 
 
-
+https://www.zhihu.com/people/g.gougou
 
 
 
