@@ -175,6 +175,7 @@ for(int idx = 1; i <= n; ++idx) {
             f[idx][j] = max(f[idx-1][j - w[idx]] + v[idx], f[idx][j]);
     }
 }
+```
 
 ## 322. Coin Change 01 暴力
 
@@ -190,13 +191,29 @@ for(int idx = 1; i <= n; ++idx) {
 
 时间复杂度分析: 子问题总数 * 解决每个子问题的时间
 
-这个多叉树的结点有(amount^K)，相当于每一个都遍历一下，所以时间复杂度为O(amount^K)
+这个多叉树的结点有(N^K)，相当于每一个都遍历一下，每一个子问题带有一个循环，所以时间复杂度为O(K*N^K)
 
-## ## 322. Coin Change 04 上个暴力的dp
+## 322. Coin Change 04 上个暴力的dp
 
+因为这里就一个变化量amount，所以我们开一个一维数组存mount状态，我们这里的时间复杂度为O(K*N)，空间复杂度为O(N)
 
+## 322. Coin Change 05 递推1
+
+应用DP框架：
 
 ```
+# 初始化 base case
+dp[0][0][...] = base
+# 进行状态转移
+for 状态1 in 状态1的所有取值：
+    for 状态2 in 状态2的所有取值：
+        for ...
+            dp[状态1][状态2][...] = 求最值(选择1，选择2...)
+```
+
+时间复杂度为O(K*N)，空间复杂度为(N)
+
+## 322. Coin Change 05 递推2
 
 ## 746. Min Cost Climbing Stairs 01 暴力
 
@@ -232,6 +249,5 @@ https://www.cnblogs.com/grandyang/p/4938187.html
 
 空间复杂度为O(N),时间复杂度为O(N^2)
 
-## 
 
 
