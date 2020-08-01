@@ -213,7 +213,6 @@ for 状态1 in 状态1的所有取值：
 
 时间复杂度为O(K*N)，空间复杂度为(N)
 
-## 322. Coin Change 05 递推2
 
 ## 746. Min Cost Climbing Stairs 01 暴力
 
@@ -249,5 +248,7 @@ https://www.cnblogs.com/grandyang/p/4938187.html
 
 空间复杂度为O(N),时间复杂度为O(N^2)
 
+## 1143. Longest Common Subsequence 01 暴力搜索
 
 
+## 1143. Longest Common Subsequence 02 dp
