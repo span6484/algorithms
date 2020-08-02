@@ -250,5 +250,38 @@ https://www.cnblogs.com/grandyang/p/4938187.html
 
 ## 1143. Longest Common Subsequence 01 暴力搜索
 
+一种有三种情况，第一种是匹配到，然后就继续同时往下走，还有一种是没有匹配赛，要么text1走，要么text2走。
 
-## 1143. Longest Common Subsequence 02 dp
+注意边界条件为何x == -1 || y == -1 即可。
+
+那么时间复杂度最坏为O(2^(M+N))
+
+一个问题
+
+```cpp
+if str1[i - 1] == str2[j - 1]:
+    # ...
+else:
+    dp(i,j) = max(dp(i-1,j), 
+                   dp(i,j-1),
+                   dp(i-1,j-1))
+```
+
+不需要这样是为何，因为在dp(i-1,j-1)是最小的那个
+
+
+## 1143. Longest Common Subsequence 02 dp 迭代
+
+很明显他有两个状态，所以我们用一个二维memo来存储状态即可。
+
+时间复杂度为O(M*N),空间复杂度为O(M*N)
+
+## 1143. Longest Common Subsequence 02 dp 递推
+
+还是应用框架即可。
+
+复杂度为上一个一样。
+
+## 1035. Uncrossed Lines
+
+## 583. Delete Operation for Two Strings
