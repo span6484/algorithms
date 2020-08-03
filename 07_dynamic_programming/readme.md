@@ -276,12 +276,38 @@ else:
 
 时间复杂度为O(M*N),空间复杂度为O(M*N)
 
-## 1143. Longest Common Subsequence 02 dp 递推
+## 1143. Longest Common Subsequence 03 dp 递推
 
 还是应用框架即可。
 
-复杂度为上一个一样。
+时间复杂度为O(M*N),空间复杂度为O(M*N)
 
-## 1035. Uncrossed Lines
+## 1143. Longest Common Subsequence 04 dp memory optimization
+
+You may notice that we are only looking one row up in the solution above. So, we just need to store two rows.
+
+time complexity O(M*N)
+
+space complexity O(N)
+
+## 1143. Longest Common Subsequence 05 dp memory optimization
+
+我们开的空间在于第二重循环，所以我们将小的放进二重循环中。
+
+time complexity O(M*N)
+
+space complexity O(min{M,N})
+
+## 1035. Uncrossed Lines 01 dp 递归 02 递推 03 内存优化
+
+和1143完全一样，不相交，又要对应。本质就是最长子序列。
 
 ## 583. Delete Operation for Two Strings
+
+这道题要求最少改变，其实就是减去最大子序列，求同存异，所以和1143一样。
+
+## 1092. Shortest Common Supersequence
+
+
+## 1062. Longest Repeating Substring
+## 516. Longest Palindromic Subsequence
