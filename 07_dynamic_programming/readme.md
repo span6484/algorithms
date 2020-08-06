@@ -306,8 +306,14 @@ space complexity O(min{M,N})
 
 这道题要求最少改变，其实就是减去最大子序列，求同存异，所以和1143一样。
 
+## 516. Longest Palindromic Subsequence 01 dp
+
+这道题也和最长子序列相同，我们就是求他和自身的逆序的最长子序列，就是最长的回文子序列。
+
+时间复杂度为O(N*N)
+
+空间复杂度为O(N)
+
 ## 1092. Shortest Common Supersequence
 
 
-## 1062. Longest Repeating Substring
-## 516. Longest Palindromic Subsequence
