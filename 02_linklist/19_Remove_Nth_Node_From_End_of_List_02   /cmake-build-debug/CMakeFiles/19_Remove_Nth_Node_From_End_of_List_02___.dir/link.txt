@@ -1,1 +1,0 @@
-/Library/Developer/CommandLineTools/usr/bin/cc -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names  CMakeFiles/19_Remove_Nth_Node_From_End_of_List_02___.dir/main.c.o  -o 19_Remove_Nth_Node_From_End_of_List_02___ 

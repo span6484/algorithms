@@ -1,3 +1,0 @@
-/Users/frank/Documents/Burger/09_linklist/19_Remove_Nth_Node_From_End_of_List_02   /cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/Users/frank/Documents/Burger/09_linklist/19_Remove_Nth_Node_From_End_of_List_02   /cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/frank/Documents/Burger/09_linklist/19_Remove_Nth_Node_From_End_of_List_02   /cmake-build-debug/CMakeFiles/19_Remove_Nth_Node_From_End_of_List_02___.dir
