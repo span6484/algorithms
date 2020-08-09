@@ -7,6 +7,10 @@
 
 身白操作，夫人自织，食不加肉，衣不重采，折节下贤人，厚宾客，赃贫吊死，与百姓同其劳。
 
+## Resources
+
+Compiler Explorer
+
 ## 2019
 
 11.4-11.5 : linux base 
