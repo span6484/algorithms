@@ -4,6 +4,22 @@
 
 basic case / recurrence relation
 
+## complexity
+
+the product of the number of recursion invocations (denoted as R) and the time complexity of calculation (denoted as O(s)) that incurs along with each recursion call.
+
+O(T) = R * O(s)
+
+## 206. Reverse Linked List 01 recursive
+
+Recursive method enters the bottom(here is the end of the list) and then backtracks.
+
+Base case -> recursion -> operation.
+
+TC: O(n)
+
+SC: O(n)
+
 ## 344. Reverse String 01 recursion
 
 To recurse the index which we want to loop.
@@ -28,32 +44,15 @@ Time complexity: O(n)
 
 Space complexity: O(n)
 
+## 700. Search in a Binary Search Tree 01 recursion
+
+First this is a BST, so it has an order.
+
+worst:
+
+TC: O(n)
+
+SC: O(n)
+
 # Tail call
-
-A simple tail recursive function:
-
-```cpp
-unsigned int f( unsigned int a ) {
-   if ( a == 0 ) {
-      return a;
-   }
-   return f( a - 1 );   // tail recursion
-}
-```
-
-A simple tail recursive function:
-
-unsigned int f( unsigned int a ) {
-   if ( a == 0 ) {
-      return a;
-   }
-   return f( a - 1 );   // tail recursion
-}
-Tail recursion is basically when:
-
-there is only a single recursive call that call is the last statement in the function And it's not "better", except in the sense that a good compiler can remove the recursion, transforming it into a loop. This may be faster and will certainly save on stack usage. The GCC compiler can do this optimisation.
-
-
-
-
 
