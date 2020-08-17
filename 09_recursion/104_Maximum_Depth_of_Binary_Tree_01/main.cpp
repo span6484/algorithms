@@ -1,7 +1,7 @@
 class Solution {
 public:
     int maxDepth(TreeNode* root) {
-        retur n helper(root, 0);
+        return helper(root, 0);
     }
     
     int helper(TreeNode* root, int depth) {

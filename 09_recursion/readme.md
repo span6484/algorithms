@@ -150,5 +150,26 @@ SC: O(n)
 
 ## 104. Maximum Depth of Binary Tree 01 tail recursion
 
- 
+Here we add a depth parameter to store the record.
 
+TC: O(n)
+
+SC: O(1)
+
+## 50. Pow(x, n) 01 tail recursion
+
+Time complexity : O(logN)
+
+Space complexity : O(1)
+
+O(N) exceed the time limit 
+
+16 is 2^4 and (2*2) ^ 2 and (4*4) ^ 1
+
+So we can conjuer up the divide-and-conquer algorithms.
+
+Be careful -1 * INT_MIN = INT_MAX + 1
+
+So we use long to cast the type
+
+Q:  Why do we usually use dichotomy rather than thirds?
