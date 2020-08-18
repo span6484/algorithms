@@ -173,3 +173,9 @@ Be careful -1 * INT_MIN = INT_MAX + 1
 So we use long to cast the type
 
 Q:  Why do we usually use dichotomy rather than thirds?
+
+## 21. Merge Two Sorted Lists 01 recursion
+
+TC : O(N)
+
+SP : O(N)
