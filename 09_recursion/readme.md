@@ -179,3 +179,15 @@ Q:  Why do we usually use dichotomy rather than thirds?
 TC : O(N)
 
 SP : O(N)
+
+## 779. K-th Symbol in Grammar 01 recursion 
+
+The whole structure can be viewed a binary tree, when a node is 0, their two children nodes are 0 and 1, similarly, when a node is 1. We can know whether the position of K is a left node or a right node by dividing 2. If K is even, current node is right child, and its parent is the (K/2)th node in previous row;
+The value of current node depends on its parent node, without knowing its parent node value, we still cannot determine current node value. That's why we need recursion, we keep going previous row to find the parent node until reach the first row. Then all the parent node value will be determined after the recursion function returns.
+
+TC: O(N)
+
+SP: O(N)
+
+
+
