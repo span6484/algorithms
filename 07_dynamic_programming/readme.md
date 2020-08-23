@@ -321,3 +321,45 @@ space complexity O(min{M,N})
 
 ## 96. Unique Binary Search Trees 01 dp recursion
 
+Taking 1~n as root respectively:
+
+    1 as root: # of trees = F(0) * F(n-1)  // F(0) == 1
+
+    2 as root: # of trees = F(1) * F(n-2) 
+
+    3 as root: # of trees = F(2) * F(n-3)
+
+    ...
+    
+    n-1 as root: # of trees = F(n-2) * F(1)
+    
+    n as root:   # of trees = F(n-1) * F(0)
+ 
+    So, the formulation is:
+    
+    F(n) = F(0) * F(n-1) + F(1) * F(n-2) + F(2) * F(n-3) + ... + F(n-2) * F(1) + F(n-1) * F(0)
+
+
+State transition equation：
+
+for(int i = 1; i <= n; i++) {
+    memo[n] += helper(i - 1) * helper(n - i);
+}
+
+TC : O(N^2)
+
+Because 1 + 2 + 3 + ... + n = O(n^2)
+
+SC : O(N)
+
+## 96. Unique Binary Search Trees 02 dp iteration 
+
+moban
+
+TC : O(N^2)
+
+SC : O(N)
+
+## 96. Unique Binary Search Trees 03 math
+
+catalan
