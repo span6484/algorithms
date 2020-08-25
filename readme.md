@@ -381,6 +381,20 @@ cpp 细节：如何组织cpp项目，如何写cmake，如何引入test，析构�
 
 7.21 eng 
 
+7.22 - 8.4 eng / algorithms recursion dp
+
+8.4 - 8.12 eng review 
+
+8.13 cpp
+
+8.14 - 8.17 eng
+
+8.18 - 8.22 travel
+
+8.23 - 8.25 cpp eng
+
+
+
 https://www.zhihu.com/people/g.gougou
 
 

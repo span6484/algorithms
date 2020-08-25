@@ -359,7 +359,3 @@ moban
 TC : O(N^2)
 
 SC : O(N)
-
-## 96. Unique Binary Search Trees 03 math
-
-catalan
