@@ -190,4 +190,21 @@ TC: O(N)
 SP: O(N)
 
 
+# Similar
+
 ## 687. Longest Univalue Path 01 recursion
+
+TC : O(N)
+
+SC : O(H)
+
+## 543. Diameter of Binary Tree 01 recursion
+
+TC : O(N)
+
+SC : O(H)
+
+## 124. Binary Tree Maximum Path Sum 01 recursion
+
+
+
