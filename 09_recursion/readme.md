@@ -230,7 +230,43 @@ SC : O(H)
 
 ## 783. Minimum Distance Between BST Nodes 01 recursion
 
+Actually, the essence of this question is sorting.
 
+And we know that BST'S sorting equals to the inorder tranverse.
 
+TC: O(N)
 
+SP: O(H)
 
+## 1137. N-th Tribonacci Number 01 recursion dp
+
+The same as fibnacci
+
+TC: O(n)
+
+SC : O(N)
+
+## 894. All Possible Full Binary Trees 01 recursion
+
+1. Be careful, the number of node must be odd.
+
+2. Subtrees are solutions from smaller problems.
+
+```python
+trees(n):
+    for i = 1 to n, step 2:
+        root.left := trees(i)
+        root.right := trees(n-i-1)
+```
+
+The time complexity and space complexity are always equal to the size of the output
+
+O(2 ^ N)
+
+https://www.youtube.com/watch?v=noVVstnQvyY
+
+https://zxi.mytechroad.com/blog/tree/leetcode-894-all-possible-full-binary-trees/
+
+https://www.cnblogs.com/grandyang/p/10952459.html
+
+https://leetcode-cn.com/circle/article/lWYCzv/
