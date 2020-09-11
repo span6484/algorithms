@@ -152,3 +152,14 @@ review cpp string
 
 反序列化我是利用双栈，我们先将str中的元素匹配出来生成节点存入que中，我们利用parent取连接que头两个元素，然后非NULL的元素存入parent中。
 
+## 100. Same Tree 01 resursion
+
+If two nodes have the same value, recurse in the same direction at the same time
+
+TC : O(N)
+
+SC : O(N)
+
+## 100. Same Tree 02 resursion
+
+The same as above

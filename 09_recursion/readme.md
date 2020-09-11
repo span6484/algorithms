@@ -259,9 +259,8 @@ trees(n):
         root.right := trees(n-i-1)
 ```
 
-The time complexity and space complexity are always equal to the size of the output
+The time complexity and space complexity are always equal to the size of the output????
 
-O(2 ^ N)
 
 https://www.youtube.com/watch?v=noVVstnQvyY
 
@@ -270,3 +269,11 @@ https://zxi.mytechroad.com/blog/tree/leetcode-894-all-possible-full-binary-trees
 https://www.cnblogs.com/grandyang/p/10952459.html
 
 https://leetcode-cn.com/circle/article/lWYCzv/
+
+## 894. All Possible Full Binary Trees 02 dp
+
+To store the smaller num size subtree.
+
+TC : O(2 ^ N) ?? 
+
+SC : O(2 ^ N) ??
