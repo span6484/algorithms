@@ -174,3 +174,18 @@ SC : worst O(2 ^ H) but the solution says O(min(m,n)). I think it's not right
 
 ## 100. Same Tree 03 BFS one queue
 
+## 124. Binary Tree Maximum Path Sum 01 框架
+
+这里利用了递归的框架
+
+后续遍历
+
+每次记录一个倒V字，并取最大的更新
+
+返回的是一边加上node，因为是path。
+
+这个是都要遍历一次
+
+时间复杂度O(N)
+
+空间复杂度O(N)
