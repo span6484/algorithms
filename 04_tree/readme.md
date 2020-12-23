@@ -189,3 +189,39 @@ SC : worst O(2 ^ H) but the solution says O(min(m,n)). I think it's not right
 时间复杂度O(N)
 
 空间复杂度O(N)
+
+## 99. Recover Binary Search Tree 01 
+
+先来个笨办法
+
+先中序遍历成一个一维数组，然后吧值排序一下，然后依次赋值
+
+时间复杂度 O(n) 
+
+空间复杂度 O(n)
+
+虽然笨，但可针对任意数目错乱情况
+
+## 99. Recover Binary Search Tree 02
+
+这次用了双指针法，因为他是两个节点swap了一下，我们first代表第一个节点，second代表第二个节点
+
+中序遍历，判断前一个结点是否大于当前的，先第一次定下第一个节点就不变了，然后两两比较，然后不断变更second到最后一个错误结点。
+
+然后最后交换值
+
+Time O(n)
+
+space O(n)
+
+## 99. Recover Binary Search Tree 03 
+
+02的迭代法，中序遍历就是利用一个栈，先把left一路到底存储
+
+然后中间逻辑进行比较和遍历法一样，然后指向right去右边挂载的子树进行遍历。
+
+注意框架，不断的取栈(left),还有右侧挂载子树
+
+time O(N)
+
+space O(n)
