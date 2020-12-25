@@ -16,6 +16,27 @@
 
 递归是先把左边装到底然后慢慢push进来存值，然后每次取栈顶元素存值然后看他右侧，这样就是左 - 中 - 右的顺序
 
+## 94. Binary Tree Inorder Traversal 03 Morris
+
+Morris 遍历
+
+其实就是一直在找前序后继，将其变线性
+
+当左边没有，肯定当前就是最左边了，然后记录，往右走
+
+如果左边有，那么当前的前序肯定在左边子树的最右。注意while语句判断。
+
+然后把最右的子树的right连到当前，root往左更加细粒度
+
+如果右边连了，那么直接恢复到nullptr，push记录，因为这里当前结点肯定是最左了，继续往右边子树走
+
+Time O(n)
+
+Space O(1)
+
+https://www.cnblogs.com/anniekim/archive/2013/06/15/morristraversal.html
+
+
 ## 145. Binary Tree Postorder Traversal 01 递归
 
 套路
@@ -225,3 +246,47 @@ space O(n)
 time O(N)
 
 space O(n)
+
+## 99. Recover Binary Search Tree 04
+
+TODO 
+
+这道题的真正符合要求的解法应该用的 Morris 遍历，这是一种非递归且不使用栈，空间复杂度为 O(1) 的遍历方法
+
+https://www.cnblogs.com/grandyang/p/4298069.html
+
+https://www.cnblogs.com/grandyang/p/4297300.html
+
+http://web.archive.org/web/20150308080843/http://noalgo.info/832.html
+
+https://www.cnblogs.com/AnnieKim/archive/2013/06/15/morristraversal.html
+
+## 98. Validate Binary Search Tree 01 递归
+
+这里先存了个preval，用于前后比较，我们这里设置成INT_MIN
+
+这里的cnt的作用是，我们允许第一个节点也是INT_MIN
+
+TIME O(N)
+
+SPACE O(N)
+
+## 98. Validate Binary Search Tree 02 迭代
+
+迭代框架用栈
+
+TIME O(N)
+
+SPACE O(N)
+
+## 98. Validate Binary Search Tree 03 Morris
+
+其实morris这里比较这么思考，morris框架上，两个地方print，所有的逻辑都在这里进行
+
+我们在这里每次比较和记录当前位置，也就是下一次的上一次。
+
+TIME O(N)
+
+SPACE O(1)
+
+TODO: 为什么去掉break跑满才能过
