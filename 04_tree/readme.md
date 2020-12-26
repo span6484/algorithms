@@ -249,9 +249,14 @@ space O(n)
 
 ## 99. Recover Binary Search Tree 04
 
-TODO 
 
 这道题的真正符合要求的解法应该用的 Morris 遍历，这是一种非递归且不使用栈，空间复杂度为 O(1) 的遍历方法
+
+我这里使用框架1是morris框架
+
+框架2是利用一个log去存储上一个结点
+
+然后就是逻辑部分，先定下第一个，然后再找第二个
 
 https://www.cnblogs.com/grandyang/p/4298069.html
 
@@ -289,4 +294,8 @@ TIME O(N)
 
 SPACE O(1)
 
-TODO: 为什么去掉break跑满才能过
+为什么去掉break跑满才能过 ??
+
+因为其他的指针还没复位
+
+https://www.cnblogs.com/grandyang/p/4298435.html
