@@ -4,9 +4,29 @@
 
 树的递归方法很套路，套用即可
 
-## 144. Binary Tree Preorder Traversal 01 迭代(stack)
+TIME O(N)
+
+SPACE O(N)
+
+## 144. Binary Tree Preorder Traversal 02 迭代(stack)
 
 这里就是每次将右节点放入再看左节点
+
+TIME O(N)
+
+SPACE O(N)
+
+## 144. Binary Tree Preorder Traversal 03 Morris
+
+preorder的morris只有一句和中序的不同
+
+我的理解是中序是左中右，当遇到link的时候，说明左边走完了，然后可以把当前位置添加
+
+而前序的话，没有遇到link我们直接添加当前结点，这里的link其实是个提醒作用，表示左边走完了，我们该走右边了
+
+TIME O(N)
+
+SPACE O(1)
 
 ## 94. Binary Tree Inorder Traversal 01
 
@@ -299,3 +319,16 @@ SPACE O(1)
 因为其他的指针还没复位
 
 https://www.cnblogs.com/grandyang/p/4298435.html
+
+## 501. Find Mode in Binary Search Tree 01 递归
+
+逻辑代码 mx = max(mx, ++mp[root->val]);
+
+一遍存一边更新最大值，然后遍历一次查找出来
+
+TIME O(N)
+
+SPACE O(N)
+
+## 501. Find Mode in Binary Search Tree 02 迭代
+
