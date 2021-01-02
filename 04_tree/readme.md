@@ -332,3 +332,65 @@ SPACE O(N)
 
 ## 501. Find Mode in Binary Search Tree 02 迭代
 
+TIME O(N)
+
+SPACE O(N)
+
+## 501. Find Mode in Binary Search Tree 03 Morris
+
+TIME O(N)
+
+SPACE O(1)
+
+## 173. Binary Search Tree Iterator 01 存数组
+
+这个方法暴力，在内部存个数组，中序遍历递归，迭代，Morris都行，但这样的话空间复杂度O(n)太高了，这里可以优化一下
+
+Time O(1)
+
+Space O(n)
+
+## 173. Binary Search Tree Iterator 02 栈
+
+这道题就是把中序遍历栈方法拆分出来，斜着一层层入栈，
+
+Time O(1)
+
+Space O(h)
+
+## 230. Kth Smallest Element in a BST 01 递归
+
+这道题几种方法都是套用框架，然后用个cnt去记录数`
+
+BST的中序遍历是有顺序的，所以用个cnt去记录到了第K个没。
+
+TIME O(h+k)
+
+SPACE O(h)
+
+## 230. Kth Smallest Element in a BST 02 迭代
+
+迭代框架
+
+TIME O(h+k)
+
+SPACE O(h)
+
+## 230. Kth Smallest Element in a BST 03 Morris
+
+TIME O(N)
+
+SPACE O(1)
+
+## 230. Kth Smallest Element in a BST 04 分治法
+
+BEST TIME O(H) WORST O(N)
+
+TIME O(H)
+
+## 230. Kth Smallest Element in a BST 05 DP 
+
+分治法这里有很多重复部分，可以用DP优化
+
+TODO
+
