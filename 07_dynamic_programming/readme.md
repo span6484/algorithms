@@ -213,6 +213,17 @@ for 状态1 in 状态1的所有取值：
 
 时间复杂度为O(K*N)，空间复杂度为(N)
 
+https://www.cnblogs.com/grandyang/p/5138186.html
+
+## 518. Coin Change 2 01 递归dp
+
+这道题和coin 1 不同的是，如果是amount到最后等于0的话，就算成功的一次，然后两种情况相加而不是比大小，比大小的话就是求最大路径了
+
+Time O(M * N)
+
+Space O(M * N)
+
+## 518. Coin Change 2 02 当成树遍历
 
 ## 746. Min Cost Climbing Stairs 01 暴力
 
@@ -236,6 +247,35 @@ for 状态1 in 状态1的所有取值：
 
 只需要i-2 i-1即可，滑动过去，所以空间复杂度减为O(1)
 
+## 70. Climbing Stairs 01 dp 递归
+
+
+套路，一共多少，和上面coin Change2 类似，不过数值没有前后关系。
+
+count就是相加
+
+memo[i] = dp(i-1) + dp(i-2);
+
+Time complexity O(N)
+
+Space O(N)
+
+## 70. Climbing Stairs 02 dp 递推
+
+模板
+
+Time  O(N)
+
+Space O(N)
+
+## 70. Climbing Stairs 03 dp 递推 滚动数组
+
+模板
+
+Time  O(N)
+
+Space O(1)
+ 
 # 线性DP 
 
 线性 DP 问题是指递推方程具有明显的线性关系，有一维线性和二维线性。

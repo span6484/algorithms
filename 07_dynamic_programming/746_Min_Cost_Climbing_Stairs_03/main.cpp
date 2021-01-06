@@ -2,13 +2,12 @@ class Solution {
 public:
     int minCostClimbingStairs(vector<int>& cost) {
         cost.push_back(0);
-        int len = cost.size();
-        vector<int> store(len);
-        store[0] = cost[0];
-        store[1] = cost[1];
+        vector<int> memo(cost.size(), -1);
+        memo[0] = cost[0];
+        memo[1] = cost[1];
         for(int i = 2; i < cost.size(); i++) {
-            store[i] = min(store[i - 2], store[i - 1]) + cost[i];
+            memo[i] = cost[i] + min(memo[i-1], memo[i-2]);
         }
-        return store[len-1];
+        return memo[cost.size()-1];
     }
 };
