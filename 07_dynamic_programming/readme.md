@@ -288,6 +288,59 @@ https://www.cnblogs.com/grandyang/p/4938187.html
 
 空间复杂度为O(N),时间复杂度为O(N^2)
 
+## 300. Longest Increasing Subsequence 02 二分
+
+这里所求并不是要的递增数组，但是长度相同
+
+总的核心思想就是，如果比最后那个大，就往后丢，增大窗口，其余的就去更新比他大的最小的那个。
+
+这里学会了std::lower_bound
+
+Time O(nlogn)
+
+Space O(n)
+
+## 300. Longest Increasing Subsequence 03 二分 简介版本
+
+## 354. Russian Doll Envelopes 01 二分
+
+这道题十分精妙
+
+拓展成二维，但我们可以巧妙降维
+
+我们先排序，第一个元素升序，第二个如果是第一个元素相同，我们降序，这样就可以避免我们把第一个相等取多次
+
+这里学习了sort + lambda
+
+其余和最大子序列相同
+ 
+TIME O(nlogn) 排序和二分都是nlogn
+
+Space O(N)
+
+
+## 334. Increasing Triplet Subsequence 01 二分
+
+最好 Time O(1)
+
+最坏 Time O(nlogn)
+
+Space O(1)
+
+## 334. Increasing Triplet Subsequence 02 双重循环追逐
+
+最坏 Time O(N*N)
+
+Space O(N)
+
+## 334. Increasing Triplet Subsequence 03 双指针
+
+两个指针不断更新较小值，如果来了个比两个都大的，就是三个了，true
+
+最坏 Time O(n)
+
+Space O(1)
+
 ## 1143. Longest Common Subsequence 01 暴力搜索
 
 一种有三种情况，第一种是匹配到，然后就继续同时往下走，还有一种是没有匹配赛，要么text1走，要么text2走。
