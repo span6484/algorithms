@@ -1,14 +1,19 @@
+
 class Solution {
 public:
     Node* connect(Node* root) {
-        if(!root || !root->left) return root;
-        root->left->next = root->right;
-        if(root->next) {
-            root->right->next = root->next->left;
-        }
-        connect(root->left);
-        connect(root->right);
+        if(!root) return root;
+        connectTwoNodes(root->left, root->right);
         return root;
     }
 
+    void connectTwoNodes(Node* left, Node* right) {
+        if(!left || !right) return;
+        left->next = right;
+
+        connectTwoNodes(left->left, left->right);
+        connectTwoNodes(right->left, right->right);
+
+        connectTwoNodes(left->right, right->left);
+    }
 };

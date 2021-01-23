@@ -1,5 +1,91 @@
 # 树的遍历
 
+## 二叉树递归模板
+
+```cpp
+/* 二叉树遍历框架 */
+void traverse(TreeNode root) {
+    if(!root) return;
+    // 前序遍历
+    traverse(root->left)
+    // 中序遍历
+    traverse(root->right)
+    // 后序遍历
+}
+```
+
+## 总结二叉树迭代模板
+
+- 前序遍历 
+
+```cpp
+void preorderTraversal(TreeNode* root) {
+    if(!root) return;
+    stack<TreeNode*> st;
+    st.push(root);
+    while(!st.empty()) {
+        auto node = st.top(); st.pop();
+        // do something here
+        if(node->right != NULL) st.push(node->right);
+        if(node->left != NULL) st.push(node->left);
+    }
+}
+```
+
+- 中序遍历 
+
+```cpp
+void inorderTraversal(TreeNode* root) {
+    if(!root) return;
+    stack<TreeNode*> st;
+    while(root || !st.empty()) {
+        while(root) {
+            st.push(root);
+            root = root->left;
+        } 
+        root = st.top(); st.pop();      
+        // do something here
+        root = root->right;
+    }
+    return res;
+}
+```
+
+- 后序遍历 
+
+```cpp
+
+// 我们什么时候才能访问节点。有如下两种情况：
+
+// 当前经过节点是叶子节点。
+// 当前经过节点的右子节点是上一次访问的节点。
+
+void postorderTraversal(TreeNode* root) {
+    if(!root) return;
+    stack<TreeNode*> st;
+    TreeNode* prev = nullptr;
+    while(root || !st.empty()) {
+        while(root) {
+            st.push(root);
+            root = root->left;
+        }
+        root = st.top();
+        if(!root->right || root->right == prev) {
+            st.pop();
+            // do something here
+            prev = root;
+            root = nullptr;
+        } else {
+            root = root->right;
+        }
+    }
+}
+```
+
+## Morris 遍历模板
+
+
+
 ## 144. Binary Tree Preorder Traversal 01 递归
 
 树的递归方法很套路，套用即可
@@ -134,6 +220,17 @@ inorder : [[左],[root],[右]]
 ## 116. Populating Next Right Pointers in Each Node 01 迭代
 
 其实就是一个层次遍历，从右到左每次出列后给next指针赋值，tmp每次暂存上一次的值就可以实现连接了。
+
+## 116. Populating Next Right Pointers in Each Node 02 递归
+
+迭代模板无法连接不同父亲的两个节点，所以我们辅助函数用两个节点然后去递归
+
+掌握思想就是，把树的问题细化成每个节点问题
+
+O(n)
+
+s(n)
+
 
 ## 116. Populating Next Right Pointers in Each Node 02 递归
 
@@ -394,3 +491,41 @@ TIME O(H)
 
 TODO
 
+## 331. Verify Preorder Serialization of a Binary Tree 01 
+
+## 226. Invert Binary Tree 01 递归 前序遍历
+
+这个题就是每个节点的左右子节点互换就行，用pre-order 和 post order 都行
+
+T o(N)
+
+S O(N)
+
+## 226. Invert Binary Tree 02 递归 后序遍历
+
+T o(N)
+
+S O(N)
+
+## 226. Invert Binary Tree 03 迭代 前序遍历
+
+T o(N)
+
+S O(N)
+
+##  226. Invert Binary Tree 04 迭代 后序遍历
+
+T o(N)
+
+S O(N)
+
+
+## 114. Flatten Binary Tree to Linked List 01 递归
+
+这里也是递归就是考虑每一个节点，最简单的就是最下面那个节点，左 = nullptr, 右 = 左 - 右
+
+然后每个操作都是一样的，先递归flatten，然后进行同样操作
+
+T o(N)
+
+S O(N)

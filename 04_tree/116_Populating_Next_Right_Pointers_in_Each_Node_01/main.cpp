@@ -20,3 +20,19 @@ public:
         return res;
     }
 };
+
+
+def Foo(stra):
+    res = ""
+    stra += "0"
+    cur = stra[0]
+    cnt = 0
+    for i in range(len(stra)):
+        if(stra[i] == cur):
+            cnt += 1
+        else:
+            res += cur
+            res += str(cnt)
+            cur = stra[i]
+            cnt = 1
+    return res
