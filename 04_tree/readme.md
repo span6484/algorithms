@@ -529,3 +529,22 @@ S O(N)
 T o(N)
 
 S O(N)
+
+## 654. Maximum Binary Tree 01 递归
+
+这里也是归结到每一个节点干什么
+
+每次找到最大的，然后左节点去连接左边位置的递归，同理右节点
+
+T O(NlogN)
+
+S O(N)
+
+## 652. Find Duplicate Subtrees 01 递归
+
+先序列化(后续遍历等等)，然后用个map去装，因为不重复，所以我们当为1的时候我们就push到res中
+
+T o(N)
+
+S O(N)
+

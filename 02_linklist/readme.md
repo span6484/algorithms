@@ -7,6 +7,7 @@
 2. 链表双指针解决问题
 
 
+## 追逐者起点要先一步next
 
 ## 707 Design Linked List
 
@@ -43,7 +44,7 @@ listFree():这里需要一个tmp来指向free，cur拿来做遍历
 
 问题：这两个指针的适当速度应该是多少？
 
-## 141. Linked List Cycle
+## 141. Linked List Cycle 01 快慢指针
 
 一般来说链表常见判断:
 
@@ -53,19 +54,28 @@ if(head == NULL || head->next == NULL) {
 }
 ```
 
-这道题就是利用快慢指针
+Time O(n)
 
-## 142 Linked List Cycle II
+space o(1)
+
+
+## 142 Linked List Cycle II 01 快慢指针
 
 A ---- x ----> B   ----- y ------> c  
      
                < --------- z -----
 
-2*(x + y ) = x+y+z
+2*(x + y ) = x+y+ n(y+z)
 
-x = z 
+x + y = n(y+z) 
+
+x = z + (n-1)(y+z)
 
 所以把将fast放到A,slow放到B，``相同速度``再走一次，相遇的地方就是那个节点
+
+O(N)
+
+O(1)
 
 ## 160 Intersection of Two Linked Lists 
 
@@ -78,6 +88,10 @@ x = z
 前面是做减法，这里是做加法，当到了末尾就到另一个脑壳上，这样相加长度就是相等的
 
 这个方法有点小巧妙，注意他不会进入死循环，他会一起到NULL然后相等结束
+
+O(M+N)
+
+O(1)
 
 ## 19 Remove Nth Node From End of List    
 
@@ -92,6 +106,11 @@ x = z
 - solution 
 
 one pass 做法,用一个在指针前面探路
+
+
+O(L)
+
+O(1)
 
 ## 小结
 
@@ -144,7 +163,7 @@ struct ListNode* cur = (struct ListNode*)malloc(sizeof(struct ListNode));
 
 链表一定要注意，有->next一定要判断当前是否为空
 
-## 328. Odd Even Linked List
+## 328. Odd Even Linked List 01 
 
 这道题就是设置一个odd 指向 head, even 指向 head->next
 
@@ -158,7 +177,17 @@ struct ListNode* cur = (struct ListNode*)malloc(sizeof(struct ListNode));
 
 分析时候，奇偶两种情况一起分析，其实是统一的while判断
 
-## 234. Palindrome Linked List
+T O(N)
+
+S O(N)
+
+## 328. Odd Even Linked List 02
+
+T O(N)
+
+S O(1)
+
+## 234. Palindrome Linked List 01 02 
 
 总体思路，先用快慢指针找到中点，然后将后半段翻转，然后进行遍历比较。
 
@@ -170,11 +199,17 @@ struct ListNode* cur = (struct ListNode*)malloc(sizeof(struct ListNode));
 
 3. 翻转链表，需要tmp存下一个，prev存上一个，然后一个start遍历到最后一个，注意最后头要连下prev
 
+O(N)
+
+O(1)
+
 # 双链表
 
 多一个prev指针
 
 ## 21. Merge Two Sorted Lists
+
+核心思想有个pre穿针引线，很巧妙
 
 这道题思路很简单，比较哪个小就连过去，然后指针移动到下一格
 
@@ -188,9 +223,21 @@ struct ListNode* cur = (struct ListNode*)malloc(sizeof(struct ListNode));
 
 https://zhuanlan.zhihu.com/p/85504177 复习下
 
-## 430. Flatten a Multilevel Doubly Linked List
+## 430. Flatten a Multilevel Doubly Linked List 
 
 我们这里就是一直往下走，如果遇到child，就把整个插入进来，然后因为这个是有很多层的，我们很容易想到递归，遇到子节点就往下溯插入即可。
+
+## 430. Flatten a Multilevel Doubly Linked List 02 dfs 
+
+首先走child，然后走next 
+
+然后因为走child之后，然后child指针要清空，head->next就变成child了，所以要提前存储
+
+prev每次随着变换，但在变换之前，先和之前的prev连接好
+
+O(n)
+
+O(N)
 
 ## 138. Copy List with Random Pointer 01
 
@@ -209,6 +256,16 @@ https://zhuanlan.zhihu.com/p/85504177 复习下
 ## 138. Copy List with Random Pointer 03
 
 这里有个巧妙的方法，先将每个节点复制插入，然后random就是原节点random的下一个，连好random后再分离出来。
+
+## 138. Copy List with Random Pointer 04
+
+第一次先创建节点，没用管random, 但这个时候，用个unordered_map 将两个地址映射
+
+第二次走的时候就是通过map将random连上
+
+O(N)
+
+O(N)
 
 ## 61. Rotate List
 
