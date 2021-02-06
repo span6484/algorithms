@@ -24,6 +24,64 @@
 
 ## 724 Find Pivot Index
 
+## 724 Find Pivot Index 02 
+
+这里就是先求出total，然后左侧是sum，pivot index左右要是相等的，则2*sum + nums[i] == total才行，否则无
+
+O (N)
+
+O (1)
+ 
+## 35. Search Insert Position 01 
+
+当找到的时候，返回index
+
+第一次遇到比target大，那也就是这个index
+
+当最后都没有，就是nums多一个位置的地方
+
+O(n)
+
+o(1)
+
+## 56. Merge Intervals 01 
+
+先排序， 其实默认的就是对index = 0 排序
+
+然后遍历，当还没有数组或者记录的左侧区域最右小于当前区间的最左侧，直接放入
+
+否则，肯定有重合，看哪个是在最右侧的，那么就直接移动右侧区间到最右侧
+
+O(n)
+
+o(n)
+
+## 01.07. Rotate Matrix LCCI 01
+
+这里有个简单的思想就是用翻转替代旋转
+
+先上下折叠翻转，然后对角线翻转
+
+O(N*N)
+
+O(1)
+
+## 01.08. Zero Matrix LCCI
+
+
+用set去重
+
+用一个set存需要清零的横坐标，一个存纵坐标
+
+O(n*n)
+
+o(n)
+
+## 498. Diagonal Traverse 01 
+
+ 
+
+
 ## 747 Largest Number At Least Twice of Others
 
 ## 66 Plus one 
@@ -44,7 +102,7 @@
 
 - 一定要首先去判断二维数组是否为空的情况！
 
-## 498 Diagonal Traverse
+## 498 Diagonal Traverse 01 
 
 方向分奇偶
 
@@ -63,6 +121,12 @@ last row: right(i,j+1)
 1st col: down(i+1,j)
 
 other: left down(i+1,j-1)
+
+## 498 Diagonal Traverse 02
+
+O(N*N)
+
+O(1)
 
 ## 54. Spiral Matrix
 
