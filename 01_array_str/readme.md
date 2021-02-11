@@ -203,9 +203,32 @@ C 库函数 void *memcpy(void *str1, const void *str2, size_t n) 从存储区 st
 
 注意比较的时候，循环直接到haystack - needle处就行了
 
+O(M*N)
+
+O(1)
+
+## 28. Implement strStr() 02 kms 有限自动机法
+
+套模板
+
+O(M+N)
+
+O(M)
+
+
 ## 14. Longest Common Prefix
 
 如果strSize == 0 的话，直接就返回""就行了
+
+## 14. Longest Common Prefix 02 
+
+因为如果说有最长的公共前缀，那么第一个一定有
+
+所以以第一个为基准去遍历，当后面的比他短或不同，直接返回substr
+
+O(M*N)
+
+O(1)
 
 ## 双指针技巧 - 情景一
 
@@ -279,7 +302,7 @@ void reverse(int *v, int N) {
 
 这里就是注意计算过程乘的部分可能超出int的范围，要用一个long来转换类型
 
-151. Reverse Words in a String
+## 151. Reverse Words in a String 01 
 
 一定注意判断是否为空等特殊情况！！！
 
@@ -311,13 +334,35 @@ end就是第一个cur-1，所以我们判断现在指向空格的前一个是否
 
 然后翻转整体添加str的结尾就完事儿了
 
-557. Reverse Words in a String III
+## 151. Reverse Words in a String 02
+
+总体思路，先将整个的reverse，然后读到不为空的时候，开始读单词再reverse，读完后加上空格，继续读下一个
+
+所以最后那个多了个空格最后要erase掉
+
+双指针去标记单词index
+
+O(N)
+
+O(1)
+
+## 557. Reverse Words in a String III
 
 此题快慢指针吃到一个空格就翻转，注意最后一次另外翻转就行
 
-26. Remove Duplicates from Sorted Array
+或者加一个trick,先给最后添加一个" ",然后最后去掉就可了
+
+O(N*N)
+
+O(1)
+
+26. Remove Duplicates from Sorted Array 01 02 
 
 这道题就是一个快慢指针，一个往前探路和之前的比较然后决定是否向前还是装到前面的框框
+
+O(N)
+
+O(1)
 
 283. Move Zeroes 01
 
@@ -373,6 +418,97 @@ for(i = 0; i < 3; i++){
 
 时间复杂度 O(N)O(N) ： 只需遍历一次price；
 空间复杂度 O(1)O(1) ： 变量使用常数额外空间
+
+## 5. Longest Palindromic Substring 01 
+
+这里的一个奇偶小技巧，(len+-1)/2
+
+(4-1)/2 = 1
+
+(3-1)/2 = 1
+
+回文有两种中间情况，一种是单，一种是双。 xxaxx. xxaaxx
+
+遍历每一个当作中心点，然后求出他们最长的回文长度
+
+记录最长的那个，求出它的start就可以求substr了
+
+O(n*n)
+
+o(1)
+
+## MAP 算法
+
+kmp - 有限自动机 框架 
+
+```cpp
+// O(M+N)
+// o(M)
+void build(const string& pat) {
+    int m = pat.size();
+    dp.resize(m);
+    for (int i = 0; i < m; ++i){
+        dp[i].resize(256);
+    }
+    dp[0][pat[0]] = 1;
+    int x = 0;
+    for(int i = 1; i < m; i++) {
+        for(int ch = 0; ch < 256; ch++) {
+            if(pat[i] == ch) 
+                dp[i][ch] = i+1;
+            else 
+                dp[i][ch] = dp[x][ch];
+        }
+        x = dp[x][pat[i]];
+    }
+}
+
+int search(string txt, string pat) {   
+    if(!pat.size()) return 0;
+    int m = pat.size();
+    int n = txt.size();
+    build(pat);
+    int state = 0;
+    for(int i = 0; i < n; i++) {
+        state = dp[state][txt[i]];
+        if(state == m) return i - m + 1;
+    }
+    return -1;
+}
+
+```
+
+思路就是先去用pattern构建有限状态机
+
+每一个字符都会对应一个状态，遇到一个字符跳转
+
+当字符和我需要的相等，我的这个点的下一个状态就是i+1，否则我利用上个节点x去看
+
+注意x的更新，是个shadow variable,他其实就是求最大的共同前后缀，然后从这里继续开始看下面的状态，就不用再重复前面的状态观察
+
+## 153. Find Minimum in Rotated Sorted Array 01 
+
+因为它之前是有序的，所以当我们变小，那就是最小的点
+
+否则就是第一个
+
+o(N)
+
+O(1)
+
+## 153. Find Minimum in Rotated Sorted Array 02 二分
+
+如果说当中间点大于最右边，那么说明rotate后，最小的去了右边，那么left = mid+1
+
+反之right = mid 
+
+因为有序，所以很容易想到二分查找使得时间复杂度变为LOGN
+
+o(logN)
+
+O(1)
+
+
 
 
 

@@ -456,3 +456,14 @@ SC : O(N)
 ## 122. Best Time to Buy and Sell Stock II 01
 
 
+## 139. Word Break 01 dp
+
+这道题就是用个unordered_map存取每一个sub字串能否去拼接
+
+然后我们从中间去切割，每次就转换成了小问题
+
+O(N*N)
+
+O(N*N)
+
+
