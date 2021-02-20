@@ -8,6 +8,54 @@ DFS就是回溯
 
 ## BFS
 
+ BFS 的本质 求最短路径
+
+BFS 相对 DFS 的最主要的区别是：BFS 找到的路径一定是最短的，但代价就是空间复杂度比 DFS 大很多
+
+BFS 还是有代价的，一般来说在找最短路径的时候使用 BFS，其他时候还是 DFS 使用得多一些（主要是递归代码好写）
+
+框架
+
+```cpp
+// 计算从起点 start 到终点 target 的最近距离
+int BFS(Node* start, Node* target) {
+    queue<Node*> q; // 核心数据结构
+    unordered_set<Node*> visited; // 避免走回头路
+
+    q.push(start); // 将起点加入队列
+    visited.insert(start);
+    int step = 0; // 记录扩散的步数
+
+    while(!q.empty()) {
+        int sz = q.size();
+        /* 将当前队列中的所有节点向四周扩散 */
+        for (int i = 0; i < sz; i++) {
+            auto cur = q.front(); q.pop();
+            /* 划重点：这里判断是否到达终点 */
+            if (cur is target)
+                return step;
+            /* 将 cur 的相邻节点加入队列 */
+            for (Node* x : cur.adj())
+                if (x not in visited) {
+                    q.push(x);
+                    visited.insert(x);
+                }
+        }
+        /* 划重点：更新步数在这里 */
+        step++;
+    }
+}
+```
+
+## 111. Minimum Depth of Binary Tree 01 BFS Queue
+
+一定注意，for(int i = 0; i < xxx.size(); i++) 的时候一定注意xxx变化了没，最好提前求出size
+
+这里BFS层次遍历
+
+O(N)
+
+O(N)
 
 ## 622. Design Circular Queue 01
 
@@ -38,11 +86,20 @@ DFS就是回溯
 
 这就是一个BFS的最短路径问题，我们这里设置一个hashmap,先构建出deadends，其实这个映射就是添加一个flag，不可走和经过后的点，那就肯定不是target，我们不必再走回头路，所以每次先判断是否是，如果不是设置为1表示我们走到这了，每次就是8种方式的转锁变换，我们添加入栈作为外围继续前进，每一维就是一个step.
 
+## 752. Open the Lock 02 BFS
+
+更加框架化，感觉用unordered_map写起要方便点，这里比较巧的是把deadend直接当visited了，反正不会从这过，这是一个小trick
+
 ## 279. Perfect Squares 01 BFS
 
 这道题也是很明显的一道最短路径问题，利用BFS模板即可，和752差不多，每次只是去减去一个平方数操作。
 
+这道题把想成树那个图就明白为什么是可以用BFS，这里说了最少也是提醒最短路径
+
+![279](https://imgconvert.csdnimg.cn/aHR0cHM6Ly9waWMubGVldGNvZGUtY24uY29tL0ZpZ3VyZXMvMjc5LzI3OV9ncmVlZHlfdHJlZS5wbmc?x-oss-process=image/format,png)
+
 ## 279. Perfect Squares 02 DP
+
 
 ## 155. Min Stack 01 vector
 
@@ -53,9 +110,9 @@ DFS就是回溯
 
 ## 20. Valid Parentheses 01 
 
-我们这里就是遇到左括号push入栈，如果是右括号那就看栈顶是否对应，因为我们"]"这类似情况，空栈访问不了栈顶，我能先PUSH一个#,最后判断是否全部对应出栈，及是不是空栈。
+三种遇到配的情况就pop，不然的话就push
 
-只用遍历一次，所以时间复杂度为O(N)，空间复杂度为O(N)
+时间复杂度为O(N), 空间复杂度为O(N)
 
 ## 20. Valid Parentheses 02
 

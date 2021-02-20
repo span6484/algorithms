@@ -286,6 +286,10 @@ https://www.cnblogs.com/grandyang/p/4938187.html
 
 用一个dp数组存每个位置的串长最大值，第二重复循环走前面的值，如果小的话，就把最大长度和当前所存的长度比较，如果大就存下来，每次第二重循环走完后都要比较下当前是否为整个的最长。
 
+深入理解看花花酱视频
+
+https://zxi.mytechroad.com/blog/dynamic-programming/leetcode-300-longest-increasing-subsequence/
+
 空间复杂度为O(N),时间复杂度为O(N^2)
 
 ## 300. Longest Increasing Subsequence 02 二分
@@ -318,6 +322,14 @@ TIME O(nlogn) 排序和二分都是nlogn
 
 Space O(N)
 
+## 354. Russian Doll Envelopes 02 DP
+
+巧妙地转化为了LIS问题，降成了一个维度
+
+O(N * N)
+
+O(N)
+
 
 ## 334. Increasing Triplet Subsequence 01 二分
 
@@ -349,7 +361,7 @@ Space O(1)
 
 那么时间复杂度最坏为O(2^(M+N))
 
-一个问题
+一个问题 
 
 ```cpp
 if str1[i - 1] == str2[j - 1]:
@@ -407,9 +419,21 @@ space complexity O(min{M,N})
 
 空间复杂度为O(N)
 
+## 516. Longest Palindromic Subsequence 02 
+
+套路未状态压缩 
+
+时间复杂度为O(N*N)
+
+空间复杂度为O(N*N)
+
 ##  
 
 ## 1092. Shortest Common Supersequence
+
+![1092](https://zxi.mytechroad.com/blog/wp-content/uploads/2019/06/1092-ep251.png)
+
+这里的五种case很精妙，好好体会
 
 
 ## 96. Unique Binary Search Trees 01 dp recursion
@@ -466,4 +490,32 @@ O(N*N)
 
 O(N*N)
 
+----------------编辑距离题型 -------------------
+
+
+## 72. Edit Distance 01 DP
+
+其实这道题思路非常简单
+
+![72dp](https://zxi.mytechroad.com/blog/wp-content/uploads/2017/10/72-ep87.png)
+
+如果l1为空，则为l2的长度，反之
+
+如果最后一位相同，那么取前面l-1
+
+比如 abbc, acc 那么就只看 abb 和 ac 
+
+abb 到 ac分为三种
+
+1.delete 2.insert 3.replace 
+
+那么对应操作就说 (i-1,j) (i,j-1) (i-1,j-1)
+
+取最小的+1
+
+dp就是去把问题规模不断化小
+
+o(l1 * l2)
+
+O(l1*l2)
 
