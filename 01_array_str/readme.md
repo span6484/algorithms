@@ -508,7 +508,11 @@ o(logN)
 
 O(1)
 
+## 121. Best Time to Buy and Sell Stock 01 
 
+双指针不断移动，不断更新和最小值的差
 
+O(N)
 
+O(1)
 

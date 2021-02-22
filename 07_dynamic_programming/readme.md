@@ -519,3 +519,15 @@ o(l1 * l2)
 
 O(l1*l2)
 
+## 最大子数组和 问题
+
+## 53. Maximum Subarray 01
+
+递推core，思想就是如果前面的最大都小于0，那我没必要加他，如果大于01再加
+
+memo[i] = memo[i-1] > 0 ? memo[i-1]+nums[i] : nums[i];
+
+O(N)
+
+O(N)
+
