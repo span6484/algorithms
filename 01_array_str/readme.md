@@ -516,3 +516,92 @@ O(N)
 
 O(1)
 
+## 滑动窗口问题
+
+## 3. Longest Substring Without Repeating Characters 01
+
+先用简单粗暴的办法，我们从左往右一个一个开始扫描
+
+用一个unordered_map已经检查过的字符，当重复就结束，记录做大值
+
+0 <= s.length <= 5 * 10^4 大概O(N*N) 处理10*8 - 9 次方，这里可能够呛
+
+但是我们这里是s consists of English letters, digits, symbols and spaces. 内循环最多128个
+
+所以 
+
+O(128 * N)
+
+O(128 * N)
+
+## 3. Longest Substring Without Repeating Characters 02
+
+slide window法
+
+详细参考花花酱的表
+
+https://www.youtube.com/watch?v=LupZFfCCbAU
+
+14：45
+
+Time complexity: O(n)
+
+Space complexity: O(128)
+
+NOTES: 长度为n的字串个数为N*N个
+
+## 3. Longest Substring Without Repeating Characters 03
+
+slide window 模板
+
+模板最为重要是寻找counter的含义, 比如说3题, 他的窗口终止条件是遇到相同的字符,所以遇到counter++,当大于0就说明有重复的
+
+所以遇到counter > 0 的情况就左边收缩
+
+O(N)
+
+O(128)
+
+
+## 模板
+
+For most substring problem, we are given a string and need to find a substring of it which satisfy some restrictions. A general way is to use a hashmap assisted with two pointers.
+
+
+
+```cpp
+int findSubstring(string s){
+    vector<int> map(128,0);
+    int counter; // check whether the substring is valid
+    int begin=0, end=0; //two pointers, one point to tail and one  head
+    int len; //the length of substring
+    int head = 0;   // 寻找substring需要找个记录
+
+    for() { /* initialize the hash map here */ }
+
+    while(end<s.size()){
+        if(map[s[end]] ? ) {  // 看规则
+             /* modify counter here */
+        }
+        map[s[end]]--;  // 看规则
+        end++;
+
+        while(/* counter condition */){ 
+            1. /* update len and head here if finding minimum*/
+                    
+            if(map[s[begin]] ?){ 
+                /*modify counter here*/ 
+            }
+            //increase begin to make it invalid/valid again
+            map[s[start]]++;
+            start++;
+        } 
+        2. /* update len and head here if finding minimum*/
+    }
+    return len == ? "" : s.substr(head, len);
+  }
+
+```
+
+One thing needs to be mentioned is that when asked to find maximum substring, we should update maximum after the inner while loop to guarantee that the substring is valid. On the other hand, when asked to find minimum substring, we should update minimum inside the inner while loop.
+
