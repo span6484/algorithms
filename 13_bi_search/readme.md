@@ -53,8 +53,26 @@ log(x)
 
 o(1)
 
-278. First Bad Version 01
+## 278. First Bad Version 01
 
 log(m)
 
 o(1)
+
+## 875. Koko Eating Bananas 01 
+
+模板，注意这里是within,所以<=
+
+log(m) * n
+
+o(1)
+
+## 378. Kth Smallest Element in a Sorted Matrix 01 
+
+这里利用二分法找第k大的数，看似巧妙，其实应该能想到
+
+找一个范围某个数，有序，都该想到二分，好好理解此题
+
+logm * nlogn
+
+o1

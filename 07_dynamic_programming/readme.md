@@ -1,5 +1,41 @@
 ## Dynamic programming 
 
+## 模板
+
+```cpp
+// 递推
+
+dp = ... # create dp array 
+         # add padding if needed
+
+dp[0][0] = #init dp array base cases
+
+for i ...
+    for j ...
+    ...
+        dp[i][j] = ... # transition
+
+return dp[m][n]
+
+// 递归
+
+mem = ... # create mem dict 
+
+def dp(i, j, ...):
+    if base_case(i, j) : return 
+    if (i, j) not in mem:
+        mem[(i, j)] = ...  # transition
+    return mem[(i,j)]
+
+return dp(m,n)
+
+
+```
+
+
+## 
+
+
 Fibonachi Sequence 
 
 1 1 2 3 5 8 13 21
@@ -531,3 +567,73 @@ O(N)
 
 O(N)
 
+## 62. Unique Paths 01
+
+路径问题 memo[m][n] = dp(m-1, n) + dp(m, n-1);
+
+O(M*N)
+
+O(M*N)
+
+## 62. Unique Paths 02 
+
+递推
+
+## 926. Flip String to Monotone Increasing 01 
+
+暴力法的话，分成两部分，左边全0，右边全1，然后去统计需要翻转的数
+
+这样的复杂度为N^2, S.length 可达到20000,肯定超时，一般大于5k就不可了
+
+一般要n or nlogn办法
+
+这里就是空间换时间的思想
+
+用两个数组，一个表示前n个全换成0需要翻转的个数，另一个反向计算全换成1
+
+最后再遍历一次找相加之和
+
+O(N)
+
+O(N)
+
+## 818. Race Car 01 BFS 见chapter 03
+
+## 818. Race Car 02 dp 
+
+trick : 需要移位的数字<<移位的次数n 
+
+运算规则：按二进制形式把所有数字向左移动相应的位数，高位移出（舍弃），低位的空位补0。相当于乘以2的n次方
+
+1 * 2^n : 1 << n
+
+log2() 函数
+
+分成三次情况
+
+1. 刚好加速到
+
+if((1 << n) == t+1) return memo[t] = n;
+
+2. 先过了点然后返回
+
+memo[t] = n + 1 + dp((1<<n)-1-t);
+
+3. 提前一此返回再继续
+
+for(int m = 0; m < n-1; m++) {
+    int cur = (1<<(n-1)) - (1 << m);
+    memo[t] = min(memo[t], n-1+1+m+1+dp(t-cur));
+}
+
+复杂度就是看有多少个子问题，每个子问题复杂度多少
+
+子问题有t个，target
+
+每个子问题，因为for循环的是t的对数
+
+所以O(tlogt)
+
+O(t + logt )
+
+挺难想到
