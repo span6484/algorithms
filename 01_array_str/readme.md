@@ -605,3 +605,16 @@ int findSubstring(string s){
 
 One thing needs to be mentioned is that when asked to find maximum substring, we should update maximum after the inner while loop to guarantee that the substring is valid. On the other hand, when asked to find minimum substring, we should update minimum inside the inner while loop.
 
+## 15. 3Sum 01 hashtable
+
+虽然是三个数，我们只需要两个就能用hashtable去判断第三个有没有，注意去重操作
+
+O(N^2)
+
+O(N)
+
+## 15. 3Sum 02 2 ptrs
+
+
+ 
+
