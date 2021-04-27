@@ -356,13 +356,16 @@ O(N*N)
 
 O(1)
 
-26. Remove Duplicates from Sorted Array 01 02 
+## 26. Remove Duplicates from Sorted Array 01 02 
 
 这道题就是一个快慢指针，一个往前探路和之前的比较然后决定是否向前还是装到前面的框框
 
 O(N)
 
 O(1)
+
+## 26. Remove Duplicates from Sorted Array 03 
+
 
 283. Move Zeroes 01
 
@@ -485,6 +488,29 @@ int search(string txt, string pat) {
 当字符和我需要的相等，我的这个点的下一个状态就是i+1，否则我利用上个节点x去看
 
 注意x的更新，是个shadow variable,他其实就是求最大的共同前后缀，然后从这里继续开始看下面的状态，就不用再重复前面的状态观察
+
+## 周期字符串问题
+
+https://writings.sh/post/algorithm-repeated-string-pattern
+
+## 459. Repeated Substring Pattern
+
+s+s,去掉首尾两个元素，如果s仍是子串，那么s就是周期字符串
+
+注意这里256要超时，如果只是字母的话128即可
+
+O(m+n)
+
+O(128m)
+
+## 459. Repeated Substring Pattern 02 
+
+利用string的find
+
+从index = 1 开始，如果最后找到就从size开始，说明完全和第二个重合，那么就不是
+
+
+
 
 ## 153. Find Minimum in Rotated Sorted Array 01 
 
@@ -669,4 +695,3 @@ void slidingWindow(string s, string t) {
 }
 ```
  
-

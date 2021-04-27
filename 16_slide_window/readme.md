@@ -44,4 +44,28 @@ One thing needs to be mentioned is that when asked to find maximum substring, we
 
 ## 3. Longest Substring Without Repeating Characters 
 
-## 
+## 76. Minimum Window Substring
+
+模板
+
+o(n)
+
+o(1)
+
+## 567. Permutation in String
+
+模板
+
+o(n)
+
+o(1)
+
+
+## 438. Find All Anagrams in a String
+
+
+模板
+
+o(n)
+
+o(1)

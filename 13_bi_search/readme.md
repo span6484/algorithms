@@ -76,3 +76,11 @@ o(1)
 logm * nlogn
 
 o1
+
+## 1011. Capacity To Ship Packages Within D Days 01 二分
+
+可以明确最低运载能力必须要不小于数组中的最大值（必须要满足一天至少运一个，运载能力至少要比每个包裹的重量都要大才行，不然就会出现有包裹一直运不走），不大于数组的总和（一天全部运走），即区间[max(weights), sum(weights)];
+
+O(log(sum_vec) * n)
+
+O(1)
