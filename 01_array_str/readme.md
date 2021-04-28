@@ -695,3 +695,11 @@ void slidingWindow(string s, string t) {
 }
 ```
  
+## 1423. Maximum Points You Can Obtain from Cards 01 滑动窗口
+
+左右去拿最大，那么中间这些就要最小，刚好用一个窗口去滑动
+
+o(n)
+
+o(1)
+
