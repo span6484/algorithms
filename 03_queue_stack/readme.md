@@ -218,3 +218,18 @@ for example
 
 状态 {pos, speed}
 
+## 924. Minimize Malware Spread 01 BFS
+
+每次删去一个看BFS感染多少
+
+O(K*N*N)
+
+O(N)
+
+## 924. Minimize Malware Spread 02 DFS
+
+注意函数一定要用引用才能改变！！
+
+o(K*N*N)
+
+o(n)

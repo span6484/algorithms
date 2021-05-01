@@ -33,7 +33,9 @@ https://labuladong.gitee.io/algo/%E7%AE%97%E6%B3%95%E6%80%9D%E7%BB%B4%E7%B3%BB%E
 ```cpp
 class UF {
 public:
-    UF(int num) : parent(num), size(num) {
+    UF(int num) 
+        : parent(num), 
+        size(num) {
         for(int i = 0; i < num; i++) {
             parent[i] = i;
             size[i] = 1;
@@ -43,7 +45,7 @@ public:
         if(x != parent[x]) {
             x = find(parent[x]);
         }
-        return parent[x];
+        return parent[x]; // why not x?
     } 
     bool merge(int x, int y) {
         int rootx = find(x);

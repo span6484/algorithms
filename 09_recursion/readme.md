@@ -174,6 +174,16 @@ So we use long to cast the type
 
 Q:  Why do we usually use dichotomy rather than thirds?
 
+## 50. Pow(x, n) 02 
+
+trick : 
+
+这里的条件只用管 n == 0, 所以这里都不需要 * -1 避免了溢出
+
+pow(x, n) := pow(x * x, n / 2) * (x if n % 2 else 1)
+
+pow(x, 0) := 1 
+
 ## 21. Merge Two Sorted Lists 01 recursion
 
 TC : O(N)

@@ -637,3 +637,12 @@ for(int m = 0; m < n-1; m++) {
 O(t + logt )
 
 挺难想到
+
+## 403. Frog Jump 
+
+https://leetcode-cn.com/problems/frog-jump/solution/gong-shui-san-xie-yi-ti-duo-jie-jiang-di-74fw/
+
+o(N^N)
+
+o(n^n)
+

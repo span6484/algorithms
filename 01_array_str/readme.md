@@ -703,3 +703,29 @@ o(n)
 
 o(1)
 
+137. Single Number II 01 
+
+O(N)
+
+O(n)
+
+137. Single Number II 02 bit
+
+注意这里的trick
+
+sum += ((num >> i) & 1);  // 第i位求和
+
+res |= (1 << i); 求余
+
+o(32n)
+
+o(1)
+
+## 690. Employee Importance
+
+就是拿个map去对应，
+
+O(n)
+
+o(n)
+
