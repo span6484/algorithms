@@ -1,5 +1,16 @@
 ## 堆
 
+https://zhuanlan.zhihu.com/p/111734399
+
+堆排序，原地，nlogn, 不稳定
+
+插入和删除主要靠堆化，复杂度都为log(n)
+
+1. 建堆 ON
+
+2. 排序 nlogn
+
+
 ## 23. Merge k Sorted Lists
 
 学会利用priority_queue
@@ -65,3 +76,11 @@ add o(logn)
 find O(1)
 
 空间o(n)
+
+## 1244. Design A Leaderboard
+
+addScore/ reset o(logn) 
+
+topk o(N)
+
+o(1)

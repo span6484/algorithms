@@ -20,3 +20,9 @@ private:
     priority_queue<int> lo;   // max heap
     priority_queue<int, vector<int>, greater<int> > hi;
 };
+
+
+"top","reset","reset","addScore","reset"]
+[1],[3],[4],[2,70],[2]]
+
+[3,76],[4,68],[5,89],[6,31],[7,7],[8,1],[9,98],[10,42]
