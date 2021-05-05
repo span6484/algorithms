@@ -659,3 +659,13 @@ o(n^n)
 O(n)
 
 o(n)
+
+## 1473. Paint House III 01
+
+记忆化搜索，还需要好好理解
+
+## 718. Maximum Length of Repeated Subarray 01 dp
+
+o(m*n)
+
+o(m*n)

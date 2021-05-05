@@ -279,3 +279,11 @@ O(N)
 o(n)
 
 o(1)
+
+## 143. Reorder List 01 
+
+拿个unordered_map去存下标和list地址
+
+O(n)
+
+o(n)

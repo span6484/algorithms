@@ -1,10 +1,14 @@
-## 7. Reverse Integer
+## 7. Reverse Integer 01
 
 / 和 % 的基本方法
 
 o(n)  -- o(logx)
 
 o(1)
+
+## 7. Reverse Integer 02
+
+这里先求出范围，每次去判断
 
 ## 9. Palindrome Number
 
