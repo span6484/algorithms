@@ -84,3 +84,39 @@ o1
 O(log(sum_vec) * n)
 
 O(1)
+
+## 33. Search in Rotated Sorted Array
+
+利用二分查找
+
+先检查左右两侧哪边有序，在有序的一方再比较大小
+
+o(logn)
+
+## 1482. Minimum Number of Days to Make m Bouquets
+
+O(mlogn)
+
+o(1)
+
+## 34. Find First and Last Position of Element in Sorted Array 01
+
+很明显的二分法
+
+因为找到了，可能左边有，可能右边有，索性分成两个来搞，也可以加个bool变量区分
+
+o(logn)
+
+o(1)
+
+## 34. Find First and Last Position of Element in Sorted Array 02
+
+加个bool变量复用
+
+## 34. Find First and Last Position of Element in Sorted Array 03
+
+利用lower_bound upper_bound来找
+
+o(logn)
+
+o(1)

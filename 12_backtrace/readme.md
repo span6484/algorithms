@@ -152,3 +152,37 @@ state以参数形式不用手动回退
 ## todo
 
 https://zhuanlan.zhihu.com/p/112926891
+
+## 1723. Find Minimum Time to Finish All Jobs
+
+So, we need to do the full search, but we can speed it up a little:
+
+Track the current best result and use it to prune.
+If two or more workers have the same working time, we only need to consider one of them.
+The last optimization helps a lot, and we can just use a hash set to track the working time.
+
+o(n^k)
+
+## 32. Longest Valid Parentheses
+
+遇到(就入栈，）就出栈然后看栈是否为空
+
+如果为空，那说明不匹配，把里面存的上一次不匹配括号idx pop出来了
+
+如果不为空，那说明匹配，然后更新坐标差
+
+这里非常巧妙地是先push一个-1，还有存上一个不匹配下标的做法
+
+o(n)
+
+o(n)
+
+## 78. Subsets
+
+全搜索，剪枝，不过我们这里就不用记忆化去剪枝
+
+直接给个标志位表示这次变化了么，变化了下一轮就加，每次push_back都是马后炮加上一轮
+
+o(2^n)
+
+o(n)

@@ -669,3 +669,11 @@ o(n)
 o(m*n)
 
 o(m*n)
+
+## 740. Delete and Earn 01
+
+和打家劫舍一样的思路
+
+o(m+n)
+
+o(m)

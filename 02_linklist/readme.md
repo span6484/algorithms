@@ -287,3 +287,15 @@ o(1)
 O(n)
 
 o(n)
+
+## 445. Add Two Numbers II 01
+
+倒序应该很容易想到stack来做
+
+o(max(m,n))
+
+o(m+n)
+
+## 445. Add Two Numbers II 02
+
+简化一下写法

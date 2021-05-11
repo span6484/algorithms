@@ -558,3 +558,10 @@ o(n)
 
 o(h)
 
+## 872. Leaf-Similar Trees
+
+后续遍历即可
+
+o(n+h)
+
+o(n+h)
