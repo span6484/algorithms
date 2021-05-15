@@ -85,3 +85,23 @@ o(nlogn)
 
 o(logn)
 
+## 581. Shortest Unsorted Continuous Subarray
+
+先排序，然后比较
+
+todo: 这里可以有更好的办法
+
+o(nlogn)
+
+o(n)
+
+## 49. Group Anagrams
+
+因为异构词，肯定sort后是一样的，sort后作为key，然后加入value的vector中
+
+o(nklogk)
+
+o(nk)
+
+
+
