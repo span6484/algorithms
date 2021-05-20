@@ -843,3 +843,42 @@ O(n)
 
 O(n)
 
+## 448. Find All Numbers Disappeared in an Array 01
+
+就是先用一个set去存入1-n
+
+然后通过num去erase
+
+剩下没erase掉的肯定就是没有的
+
+O(logn)
+
+O(n)
+
+C++ STL中各种数据结构操作的时间复杂度比较:
+
+https://blog.csdn.net/dieju8330/article/details/108551007
+
+## 448. Find All Numbers Disappeared in an Array 02
+
+每个数组+n
+
+如果哪个数组没有 > n，说明这个下标没有被轮到，就是缺的
+
+o(n)
+
+o(1)
+
+## 394. Decode String
+
+o(n)
+
+o(n)
+
+## 217. Contains Duplicate 01
+
+用个map去记录，
+
+o(n)
+
+o(n)

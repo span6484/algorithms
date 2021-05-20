@@ -53,3 +53,15 @@ o(1)
 o(n)
 
 o(1)
+
+## 13. Roman to Integer 
+
+就是如果左边的小于右边，就减就行
+
+o(n)
+
+o(1)
+
+## 29. Divide Two Integers TODO
+
+https://leetcode-cn.com/problems/divide-two-integers/solution/wan-quan-man-zu-ti-mu-tiao-jian-de-gao-x-y74i/

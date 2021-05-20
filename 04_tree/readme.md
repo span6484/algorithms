@@ -587,3 +587,16 @@ o(n^2)
 
 o(n)
 
+## 543. Diameter of Binary Tree
+
+就是要遍历每个节点当成root看左右字数最大高度之和
+
+拿一个maxi_去记录
+
+## 538. Convert BST to Greater Tree
+
+倒着inorder，每次大于的都是右边的相加
+
+O(n)
+
+o(n)
