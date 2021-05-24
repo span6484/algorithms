@@ -199,6 +199,10 @@ https://www.cnblogs.com/anniekim/archive/2013/06/15/morristraversal.html
 
 queue一般用于BFS，stack一般用于DFS，我们这里用两个栈，一个存结点，一个存对应的需要的值，然后栈就是去DFS，去求出最后leaf是否满足条件。
 
+## 112. Path Sum 03
+
+一定注意是到叶子结点
+
 # 重建二叉树
 
 前序/后序+中序序列可以唯一确定一棵二叉树
@@ -252,6 +256,11 @@ s(n)
 //              o —— o   o
 //             /        / \
 //            o        o   o
+
+
+## 117. Populating Next Right Pointers in Each Node II 02 层次遍历
+
+
 
 ## 236. Lowest Common Ancestor of a Binary Tree 01 递归
 
