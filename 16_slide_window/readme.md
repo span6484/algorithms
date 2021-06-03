@@ -41,8 +41,27 @@ int findSubstring(string s){
 
 One thing needs to be mentioned is that when asked to find maximum substring, we should update maximum after the inner while loop to guarantee that the substring is valid. On the other hand, when asked to find minimum substring, we should update minimum inside the inner while loop.
 
+```
+void slidwindow(vector<int> nums)
+{
+    int left = 0, right = 0;
+    while(right < nums.size())
+    {
+        ...//扩大右边界并更新窗口状态
+        right++;
+        while(需要收缩)//窗口到达什么状态需要收缩
+        {
+            ...//缩小左边界并更新窗口状态
+            left++;
+        }
+    }
+}
+
+```
 
 ## 3. Longest Substring Without Repeating Characters 
+
+
 
 ## 76. Minimum Window Substring
 
@@ -69,3 +88,17 @@ o(1)
 o(n)
 
 o(1)
+
+
+
+30 - Substring with Concatenation of All Words
+
+239 - Sliding Window Maximum
+424 - Longest Repeating Character Replacement
+438
+904 - Fruit into Baskets
+930 
+992
+1004
+1234
+1248
