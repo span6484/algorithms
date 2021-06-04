@@ -1,5 +1,51 @@
 ![sort](./assets/01.png)
 
+## 归并排序
+
+```cpp
+template<typename T> 
+void merge_sort(vector<T>& arr) {
+    mergeHelper(arr, 0, arr.size()-1);
+}
+
+
+template<typename T> 
+void mergeHelper(vector<T>& arr, int left, int right) {
+    if(left >= right) return;  // 1个的时候
+    int mid = left + (right-left)/2;
+    mergeHelper(arr, left, mid);
+    mergeHelper(arr, mid+1, right);
+    merge(arr, left, mid, right);
+}
+
+template<typename T> 
+void merge(vector<T>& arr, int left, int mid, int right) {
+    vector<T> tmp(right-left);
+    int i = left, j = mid+1, k = 0;
+    while(i < mid && j < right) {
+        if(arr[i] <= arr[j]) {
+            tmp[k++] = arr[i++];
+        } else {
+            tmp[k++] = arr[j++];
+        }
+    }
+    // 判断哪个数组还有剩余
+    int start = i, end = mid;
+    if(j < right) {
+        start = j;
+        end = right;
+    }
+    while(start < right) {
+        tmp[k++] = arr[start++];
+    }
+    // tmp 拷贝回A[left...right]
+    for(int i = 0; i < right-left; i++) {
+        arr[left+i] = tmp[i];
+    }
+}
+
+```
+
 ## 88. Merge Sorted Array
 
 倒着来填写，哪个大就放后面
@@ -104,4 +150,12 @@ o(nklogk)
 o(nk)
 
 
+## 剑指 Offer 51. 数组中的逆序对 01 归并
 
+## todo
+
+https://blog.csdn.net/chch1996/article/details/106002600
+
+21 1 47 148 
+
+https://github.com/gaochengcheng/LeetCode/blob/master/LeetCode%E5%88%B7%E9%A2%98%E7%AC%94%E8%AE%B0%EF%BC%88%E6%8E%92%E5%BA%8F%E9%83%A8%E5%88%86%EF%BC%89.md
