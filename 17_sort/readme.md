@@ -46,6 +46,10 @@ void merge(vector<T>& arr, int left, int mid, int right) {
 
 ```
 
+## 归并排序 逆序对问题
+
+冒泡排序需要交换的次数就是逆序对的个数，因为每次交换最多只能消除一对逆序对，所以最小交换次数就是逆序对的个数。
+
 ## 88. Merge Sorted Array
 
 倒着来填写，哪个大就放后面
@@ -152,6 +156,10 @@ o(nk)
 
 ## 剑指 Offer 51. 数组中的逆序对 01 归并
 
+## 315. Count of Smaller Numbers After Self
+
+
+
 ## todo
 
 https://blog.csdn.net/chch1996/article/details/106002600
@@ -159,3 +167,8 @@ https://blog.csdn.net/chch1996/article/details/106002600
 21 1 47 148 
 
 https://github.com/gaochengcheng/LeetCode/blob/master/LeetCode%E5%88%B7%E9%A2%98%E7%AC%94%E8%AE%B0%EF%BC%88%E6%8E%92%E5%BA%8F%E9%83%A8%E5%88%86%EF%BC%89.md
+
+## 快速排序
+
+## 215. Kth Largest Element in an Array
+
