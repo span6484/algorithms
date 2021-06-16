@@ -170,5 +170,77 @@ https://github.com/gaochengcheng/LeetCode/blob/master/LeetCode%E5%88%B7%E9%A2%98
 
 ## 快速排序
 
+```cpp
+// 把最背后一个当pivot
+class Solution {
+public:
+    vector<int> sortArray(vector<int>& nums) {
+        qsortHelper(nums, 0, nums.size() - 1);
+        return nums;
+    }
+    void qsortHelper(vector<int>& nums, int left, int right) {
+        if(left >= right) return;
+        int pivot = partition(nums, left, right);
+        qsortHelper(nums, left, pivot - 1);
+        qsortHelper(nums, pivot+1, right);
+    }
+
+    int partition(vector<int>& nums, int left, int right) {
+        int midVal = nums[right];
+        for(int i = left; i < right; i++) {
+            if(nums[i] < midVal) {
+                swap(nums[left++], nums[i]);
+            }
+        }
+        swap(nums[left], nums[right]);
+        return left;
+    }  
+};
+
+```
+
+```cpp
+// 上述快排可能会超时，我们选择随机选pivot
+// 每次选择之前都是rand一下就可
+
+class Solution {
+public:
+    vector<int> sortArray(vector<int>& nums) {
+        srand((unsigned)time(NULL));
+        qsortHelper(nums, 0, nums.size() - 1);
+        return nums;
+    }
+    void qsortHelper(vector<int>& nums, int left, int right) {
+        if(left >= right) return;
+        int pivot = random_partition(nums, left, right);
+        qsortHelper(nums, left, pivot - 1);
+        qsortHelper(nums, pivot+1, right);
+    }
+    
+    int random_partition(vector<int>& nums, int left, int right) {
+        int random = rand() % (right - left + 1) + left;
+        swap(nums[random], nums[right]);
+        return partition(nums, left, right);
+    }
+
+    int partition(vector<int>& nums, int left, int right) {
+        int midVal = nums[right];
+        for(int i = left; i < right; i++) {
+            if(nums[i] < midVal) {
+                swap(nums[left++], nums[i]);
+            }
+        }
+        swap(nums[left], nums[right]);
+        return left;
+    }  
+};
+
+
+```
+
 ## 215. Kth Largest Element in an Array
+
+
+## 973. K Closest Points to Origin
+
 
