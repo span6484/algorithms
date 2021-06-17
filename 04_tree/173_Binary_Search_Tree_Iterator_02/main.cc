@@ -13,6 +13,7 @@ public:
     bool hasNext() {
         return !st.empty();
     }
+    
 private:
     stack<TreeNode*> st;
     void pushall(TreeNode* root) {
