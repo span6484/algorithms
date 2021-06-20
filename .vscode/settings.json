@@ -4,6 +4,10 @@
         "array": "cpp",
         "deque": "cpp",
         "string_view": "cpp",
-        "string": "cpp"
+        "string": "cpp",
+        "*.tcc": "cpp",
+        "ostream": "cpp",
+        "iosfwd": "cpp",
+        "istream": "cpp"
     }
 }

@@ -206,10 +206,33 @@ public:
 
 ## 二分法
 
+
+```cpp
+// [l, r)
+l  = lowerest 
+r = highest + 1
+while l < r:
+    m = l+(r-l)/2
+    // if f(m) : return m  // optional
+    if cond(m)
+        r = m
+    else 
+        l = m + 1
+return l;
+
+Time O(log(r-l) * (f(m) + cond( m)))
+
+```
+
 ## kmp
 
 ## 滑动窗口
 
+## 背包问题
+
+### other trick 
+
+## split实现
 
 
 https://github.com/youngyangyang04/leetcode-master
