@@ -8,7 +8,7 @@ public:
             num = -num;
             x = 1/x;
         }
-        while(num){
+        while(num) {
             if(num % 2 != 0) ans *= x;
             x *= x;
             num /= 2;

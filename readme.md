@@ -226,6 +226,43 @@ Time O(log(r-l) * (f(m) + cond( m)))
 
 ## kmp
 
+```cpp
+// O(M+N)
+// o(M)
+void build(const string& pat) {
+    int m = pat.size();
+    dp.resize(m);
+    for (int i = 0; i < m; ++i){
+        dp[i].resize(256);
+    }
+    dp[0][pat[0]] = 1;
+    int x = 0;
+    for(int i = 1; i < m; i++) {
+        for(int ch = 0; ch < 256; ch++) {
+            if(pat[i] == ch) 
+                dp[i][ch] = i+1;
+            else 
+                dp[i][ch] = dp[x][ch];
+        }
+        x = dp[x][pat[i]];
+    }
+}
+
+int search(string txt, string pat) {   
+    if(!pat.size()) return 0;
+    int m = pat.size();
+    int n = txt.size();
+    build(pat);
+    int state = 0;
+    for(int i = 0; i < n; i++) {
+        state = dp[state][txt[i]];
+        if(state == m) return i - m + 1;
+    }
+    return -1;
+}
+
+```
+
 ## 滑动窗口
 
 ## 背包问题
