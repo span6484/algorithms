@@ -260,12 +260,37 @@ int search(string txt, string pat) {
     }
     return -1;
 }
-
 ```
 
 ## 滑动窗口
 
 ## 背包问题
+
+```cpp
+void slidwindow(vector<int> nums)
+{
+    int left = 0, right = 0;
+    while(right < nums.size())
+    {
+        ...//扩大右边界并更新窗口状态
+        right++;
+        while(需要收缩)//窗口到达什么状态需要收缩
+        {
+            ...//缩小左边界并更新窗口状态
+            left++;
+        }
+    }
+}
+
+```
+
+## 回溯
+
+## 链表
+
+## DFS 
+
+## BFS
 
 ### other trick 
 
