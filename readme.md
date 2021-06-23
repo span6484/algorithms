@@ -264,7 +264,6 @@ int search(string txt, string pat) {
 
 ## 滑动窗口
 
-## 背包问题
 
 ```cpp
 void slidwindow(vector<int> nums)
@@ -284,6 +283,9 @@ void slidwindow(vector<int> nums)
 
 ```
 
+## 背包问题
+
+
 ## 回溯
 
 ## 链表
@@ -296,5 +298,16 @@ void slidwindow(vector<int> nums)
 
 ## split实现
 
+```cpp
+vector<string> split(const string& s) {
+    istringstream in(s);
+    vector<string> vec;
+    string tmp;
+    while(getline(in, tmp, ' ')) {
+        if(tmp.size()) vec.push_back(tmp);
+    }
+    return vec;
+}
+```
 
 https://github.com/youngyangyang04/leetcode-master
