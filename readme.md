@@ -285,6 +285,37 @@ void slidwindow(vector<int> nums)
 
 ## 背包问题
 
+### 01背包
+
+最基本的背包问题就是 01 背包问题：一共有 N 件物品，第 i（i 从 1 开始）件物品的重量为 w[i]，价值为 v[i]。在总重量不超过背包承载上限 W 的情况下，能够装入背包的最大价值是多少？
+
+如果是 01 背包，即数组中的元素不可重复使用，外循环遍历 arrs，内循环遍历 target，且内循环倒序:
+
+```cpp
+vector<bool> dp(sum + 1, false);
+dp[0] = true;
+for(auto num : nums) {
+    for(int i = sum; i >= num; i--) {
+        dp[i] = dp[i] || dp[i-num];
+    }
+}
+```
+
+```cpp
+vector<int> dp(sum+1, 0);
+dp[0] = 1;
+for(auto & num : nums) {
+    for(int i = sum; i >= num; i--) {
+        dp[i] = dp[i] + dp[i-num];
+    }
+}
+```
+
+###  完全背包问题：
+
+（1）如果是完全背包，即数组中的元素可重复使用并且不考虑元素之间顺序，arrs 放在外循环（保证 arrs 按顺序），target在内循环。且内循环正序。
+
+（2）如果组合问题需考虑元素之间的顺序，需将 target 放在外循环，将 arrs 放在内循环，且内循环正序。
 
 ## 回溯
 
