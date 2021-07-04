@@ -327,9 +327,39 @@ for(auto & num : nums) {
 
 ## 回溯
 
+```cpp
+void backtracking(参数) {
+    if (终止条件) {
+        存放结果;
+        return;
+    }
+
+    for (选择：本层集合中元素（树中节点孩子的数量就是集合的大小）) {
+        处理节点;
+        backtracking(路径，选择列表); // 递归
+        回溯，撤销处理结果
+    }
+}
+
+```
+
 ## 链表
 
 1. fast and slow ptr 
+
+略
+
+## 堆
+
+use **priority_queue**
+
+```cpp
+// 用法
+priority_queue<int> lo;   // max heap
+
+priority_queue<long, vector<long>, greater<long> > heap; // 这几个是小顶堆
+
+```
 
 ## DFS 
 

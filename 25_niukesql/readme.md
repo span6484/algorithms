@@ -109,3 +109,45 @@ and last_name <> 'Mary'
 order by hire_date desc;
 ```
 
+## SQL16
+
+```sql
+select t.title, avg(s.salary) as avgs from
+titles as t inner join salaries as s 
+on t.emp_no = s.emp_no
+group by title
+order by avgs;
+```
+
+“Where” 是一个约束声明，使用Where来约束数据库的数据，Where是在结果返回之前起作用的，且Where中不能使用聚合函数。
+
+“Having”是一个过滤声明，是在查询返回结果集以后对查询结果进行的过滤操作，在Having中可以使用聚合函数。
+
+groupby 和 函数组合来统计
+
+group by语法可以根据给定数据列的每个成员对查询结果进行分组统计，最终得到一个分组汇总表。
+
+推荐阅读: https://blog.csdn.net/xxpyeippx/article/details/8059910
+
+## SQL17
+
+```sql
+select emp_no, salary from salaries
+where salary = (
+    select salary from salaries group by salary order by salary desc limit 1, 1);
+```
+
+
+## SQL18
+
+```sql
+select e.emp_no, s.salary, e.last_name, e.first_name from 
+employees as e inner join salaries as s 
+on e.emp_no = s.emp_no
+where s.salary = 
+(
+    select max(salary) from salaries 
+    where salary != (
+        select max(salary) from salaries)
+);
+```
