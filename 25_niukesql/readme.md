@@ -151,3 +151,24 @@ where s.salary =
         select max(salary) from salaries)
 );
 ```
+
+## SQL19
+
+```sql
+select em.last_name, em.first_name, dp.dept_name 
+from (employees as em left join dept_emp as de on em.emp_no = de.emp_no)
+left join departments as dp on de.dept_no = dp.dept_no;
+```
+
+本题思路为运用两次LEFT JOIN连接嵌套
+
+1、第一次LEFT
+
+JOIN连接employees表与dept_emp表，得到所有员工的last_name和first_name以及对应的dept_no，也包括暂时没有分配部门的员工
+
+2、第二次LEFT
+
+JOIN连接上表与departments表，即连接dept_no与dept_name，得到所有员工的last_name和first_name以及对应的dept_name，也包括暂时没有分配部门的员工
+
+## SQL22
+
